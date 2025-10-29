@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="CS 147 HCI Project - Stanford University Autumn 2025">
+    <title>Project Name | CS 147</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <!-- EDIT: Replace with your project logo -->
+                    <img src="./assets/images/logo.png" alt="Project Logo" class="logo" onerror="this.style.display='none'">
+                    <span class="project-title">Project Name</span>
+                </div>
+
+                <!-- Mobile Menu Toggle -->
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation">
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                </button>
+
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="./index.html" class="active">Home</a></li>
+                    <li><a href="./about.html">About</a></li>
+                    <li><a href="./deliverables.html">Deliverables</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <!-- EDIT: Replace with your project name and tagline -->
+                <h1 class="hero-title">Your Project Name</h1>
+                <p class="hero-tagline">Empowering users through thoughtful design</p>
+
+                <!-- EDIT: Replace with your 2-3 sentence project description -->
+                <p class="hero-description">
+                    This project explores innovative solutions to real-world problems through human-centered design.
+                    We conducted extensive needfinding research, iterative prototyping, and user testing to create
+                    an experience that truly meets user needs.
+                </p>
+
+                <div class="hero-buttons">
+                    <a href="./about.html" class="btn btn-primary">
+                        <i class="fas fa-users"></i> Meet the Team
+                    </a>
+                    <a href="./deliverables.html" class="btn btn-secondary">
+                        <i class="fas fa-folder-open"></i> View Deliverables
+                    </a>
+                </div>
+            </div>
+
+            <!-- EDIT: Add your project hero image or mockup -->
+            <div class="hero-image">
+                <img src="./assets/images/hero-mockup.png" alt="Project Mockup" onerror="this.style.display='none'">
+                <div class="hero-placeholder">
+                    <i class="fas fa-mobile-alt"></i>
+                    <p>Project Preview</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Project Overview -->
+    <section class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Project Overview</h2>
+
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Problem Space</h3>
+                    <!-- EDIT: Describe the problem your project addresses -->
+                    <p>
+                        We identified a significant need in [target user group] for better ways to [core problem].
+                        Through needfinding, we discovered pain points around [specific issues].
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3>Target Users</h3>
+                    <!-- EDIT: Describe your primary user group -->
+                    <p>
+                        Our primary users are [user demographic] who struggle with [specific challenge].
+                        We conducted interviews with [number] users to understand their needs.
+                    </p>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                    <h3>Our Solution</h3>
+                    <!-- EDIT: Describe your solution approach -->
+                    <p>
+                        We designed [solution name/type] that enables users to [key benefit].
+                        Our design focuses on [core design principles].
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Preview -->
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">Our Team</h2>
+            <p class="section-subtitle">CS 147 Autumn 2025 Project Team</p>
+
+            <div class="team-preview">
+                <!-- EDIT: Add your team members with first name and last initial -->
+                <div class="team-member-mini">
+                    <div class="member-avatar">
+                        <img src="./assets/images/team1.jpg" alt="Team Member" onerror="this.style.display='none'">
+                        <div class="avatar-placeholder">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                    <p class="member-name">Jane D.</p>
+                    <p class="member-role">Designer</p>
+                </div>
+
+                <div class="team-member-mini">
+                    <div class="member-avatar">
+                        <img src="./assets/images/team2.jpg" alt="Team Member" onerror="this.style.display='none'">
+                        <div class="avatar-placeholder">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                    <p class="member-name">John S.</p>
+                    <p class="member-role">Researcher</p>
+                </div>
+
+                <div class="team-member-mini">
+                    <div class="member-avatar">
+                        <img src="./assets/images/team3.jpg" alt="Team Member" onerror="this.style.display='none'">
+                        <div class="avatar-placeholder">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                    <p class="member-name">Alex M.</p>
+                    <p class="member-role">Developer</p>
+                </div>
+
+                <div class="team-member-mini">
+                    <div class="member-avatar">
+                        <img src="./assets/images/team4.jpg" alt="Team Member" onerror="this.style.display='none'">
+                        <div class="avatar-placeholder">
+                            <i class="fas fa-user"></i>
+                        </div>
+                    </div>
+                    <p class="member-name">Sarah K.</p>
+                    <p class="member-role">Designer</p>
+                </div>
+            </div>
+
+            <div class="text-center" style="margin-top: 2rem;">
+                <a href="./about.html" class="btn btn-outline">Learn More About Us</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quick Links to Key Deliverables -->
+    <section class="section bg-light">
+        <div class="container">
+            <h2 class="section-title">Project Journey</h2>
+            <p class="section-subtitle">Explore our design process from research to final prototype</p>
+
+            <div class="journey-timeline">
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-search"></i>
+                    </div>
+                    <h3>Needfinding</h3>
+                    <p>User research and insights</p>
+                    <a href="./assignments/A1-needfinding.html" class="timeline-link">View →</a>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-pencil-ruler"></i>
+                    </div>
+                    <h3>Prototyping</h3>
+                    <p>Low to high-fidelity designs</p>
+                    <a href="./assignments/A5-lowfi.html" class="timeline-link">View →</a>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-video"></i>
+                    </div>
+                    <h3>Concept Video</h3>
+                    <p>Showcasing our solution</p>
+                    <a href="./assignments/A4-concept-video.html" class="timeline-link">View →</a>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-icon">
+                        <i class="fas fa-clipboard-check"></i>
+                    </div>
+                    <h3>Final Report</h3>
+                    <p>Complete documentation</p>
+                    <a href="./assignments/A11-finalreport.html" class="timeline-link">View →</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>CS 147 Project</h4>
+                    <p>Introduction to Human-Computer Interaction</p>
+                    <p>Stanford University | Autumn 2025</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="./index.html">Home</a></li>
+                        <li><a href="./about.html">About</a></li>
+                        <li><a href="./deliverables.html">Deliverables</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Course Info</h4>
+                    <ul class="footer-links">
+                        <li><a href="http://cs147.stanford.edu" target="_blank">CS 147 Course Site</a></li>
+                        <li><a href="http://hci.stanford.edu" target="_blank">Stanford HCI Group</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 CS 147 Project Team. Taught by Prof. James Landay.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="./assets/js/main.js"></script>
+</body>
+</html>

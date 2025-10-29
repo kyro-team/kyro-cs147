@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A5: Low-Fi Prototype | CS 147 Project</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <img src="../assets/images/logo.png" alt="Project Logo" class="logo" onerror="this.style.display='none'">
+                    <span class="project-title">Project Name</span>
+                </div>
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation">
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                </button>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../deliverables.html">Deliverables</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="page-header assignment-header">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="../deliverables.html">Deliverables</a> / <span>A5: Low-Fi Prototype</span>
+            </div>
+            <h1>Assignment 5: Low-Fidelity Prototype</h1>
+            <p class="assignment-subtitle">Early exploration of interaction concepts</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="assignment-intro">
+                <h2>Overview</h2>
+                <p>
+                    Our low-fidelity prototype allowed us to quickly test core interaction concepts without investing
+                    in visual design. Using paper prototypes and basic wireframes, we validated our information
+                    architecture and key user flows with real users.
+                </p>
+            </div>
+
+            <div class="downloads-section">
+                <h3><i class="fas fa-download"></i> Downloads</h3>
+                <div class="download-grid">
+                    <a href="../assets/pdfs/A5-lowfi-slides.pdf" class="download-card" target="_blank">
+                        <i class="fas fa-file-powerpoint"></i>
+                        <span>Presentation Slides</span>
+                    </a>
+                    <a href="../assets/pdfs/A5-testing-notes.pdf" class="download-card" target="_blank">
+                        <i class="fas fa-file-pdf"></i>
+                        <span>User Testing Notes</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Prototype Images</h2>
+                <!-- EDIT: Add photos of your paper prototypes or wireframes -->
+                <div class="prototype-gallery">
+                    <div class="prototype-item">
+                        <img src="../assets/images/A5-screen1.jpg" alt="Low-fi Screen 1" onerror="this.parentElement.querySelector('.media-placeholder').style.display='flex'">
+                        <div class="media-placeholder">
+                            <i class="fas fa-image"></i>
+                            <p>Screen 1</p>
+                        </div>
+                        <p class="prototype-caption">Home/Landing Screen</p>
+                    </div>
+
+                    <div class="prototype-item">
+                        <img src="../assets/images/A5-screen2.jpg" alt="Low-fi Screen 2" onerror="this.parentElement.querySelector('.media-placeholder').style.display='flex'">
+                        <div class="media-placeholder">
+                            <i class="fas fa-image"></i>
+                            <p>Screen 2</p>
+                        </div>
+                        <p class="prototype-caption">Main Task Flow</p>
+                    </div>
+
+                    <div class="prototype-item">
+                        <img src="../assets/images/A5-screen3.jpg" alt="Low-fi Screen 3" onerror="this.parentElement.querySelector('.media-placeholder').style.display='flex'">
+                        <div class="media-placeholder">
+                            <i class="fas fa-image"></i>
+                            <p>Screen 3</p>
+                        </div>
+                        <p class="prototype-caption">Secondary Features</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-section bg-light">
+                <h2>User Testing Insights</h2>
+                <!-- EDIT: Add findings from user testing -->
+                <div class="testing-insights">
+                    <div class="insight-item positive">
+                        <i class="fas fa-check-circle"></i>
+                        <div>
+                            <h4>What Worked</h4>
+                            <ul>
+                                <li>Users easily understood the main navigation structure</li>
+                                <li>Core task flow was intuitive and required minimal guidance</li>
+                                <li>Information hierarchy made sense to users</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="insight-item negative">
+                        <i class="fas fa-exclamation-circle"></i>
+                        <div>
+                            <h4>What Needs Improvement</h4>
+                            <ul>
+                                <li>Some labels were confusing and need clarification</li>
+                                <li>Users expected additional feature that we hadn't included</li>
+                                <li>One interaction pattern didn't match user mental models</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="insight-item neutral">
+                        <i class="fas fa-lightbulb"></i>
+                        <div>
+                            <h4>Key Learnings</h4>
+                            <ul>
+                                <li>Users prioritize [insight] over what we initially thought</li>
+                                <li>The mental model for [feature] differs from our assumptions</li>
+                                <li>Opportunity to simplify [specific element] in next iteration</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Key User Flows</h2>
+                <!-- EDIT: Describe the main flows you prototyped -->
+                <div class="flow-list">
+                    <div class="flow-item">
+                        <h4><i class="fas fa-route"></i> Flow 1: [Flow Name]</h4>
+                        <p>Description of this user flow and what task it accomplishes.</p>
+                    </div>
+                    <div class="flow-item">
+                        <h4><i class="fas fa-route"></i> Flow 2: [Flow Name]</h4>
+                        <p>Description of this user flow and what task it accomplishes.</p>
+                    </div>
+                    <div class="flow-item">
+                        <h4><i class="fas fa-route"></i> Flow 3: [Flow Name]</h4>
+                        <p>Description of this user flow and what task it accomplishes.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="assignment-nav">
+                <a href="./A4-concept-video.html" class="btn btn-outline">
+                    <i class="fas fa-arrow-left"></i> Previous: Concept Video
+                </a>
+                <a href="./A6-mediumfi.html" class="btn btn-primary">
+                    Next: Medium-Fi Prototype <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>CS 147 Project</h4>
+                    <p>Introduction to Human-Computer Interaction</p>
+                    <p>Stanford University | Autumn 2025</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../about.html">About</a></li>
+                        <li><a href="../deliverables.html">Deliverables</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Course Info</h4>
+                    <ul class="footer-links">
+                        <li><a href="http://cs147.stanford.edu" target="_blank">CS 147 Course Site</a></li>
+                        <li><a href="http://hci.stanford.edu" target="_blank">Stanford HCI Group</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 CS 147 Project Team. Taught by Prof. James Landay.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>

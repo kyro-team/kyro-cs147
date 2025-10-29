@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A8: High-Fi Prototype | CS 147 Project</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="container">
+                <div class="nav-brand">
+                    <img src="../assets/images/logo.png" alt="Project Logo" class="logo" onerror="this.style.display='none'">
+                    <span class="project-title">Project Name</span>
+                </div>
+                <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation">
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                    <span class="hamburger"></span>
+                </button>
+                <ul class="nav-menu" id="nav-menu">
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="../about.html">About</a></li>
+                    <li><a href="../deliverables.html">Deliverables</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <section class="page-header assignment-header">
+        <div class="container">
+            <div class="breadcrumb">
+                <a href="../deliverables.html">Deliverables</a> / <span>A8: High-Fi Prototype</span>
+            </div>
+            <h1>Assignment 8: High-Fidelity Prototype</h1>
+            <p class="assignment-subtitle">Fully interactive design with polished visuals</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="container">
+            <div class="assignment-intro">
+                <h2>Overview</h2>
+                <p>
+                    Our high-fidelity prototype represents the culmination of our iterative design process. With polished
+                    visuals, smooth animations, and complete interactivity, this prototype closely resembles the final
+                    product experience. It incorporates feedback from all previous testing rounds and demonstrates our
+                    complete design vision.
+                </p>
+            </div>
+
+            <div class="downloads-section">
+                <h3><i class="fas fa-download"></i> Prototype & Resources</h3>
+                <div class="download-grid">
+                    <!-- EDIT: Add your Figma/prototype link -->
+                    <a href="https://figma.com/proto/your-highfi-prototype-link" class="download-card featured" target="_blank">
+                        <i class="fab fa-figma"></i>
+                        <span>Try Interactive Prototype</span>
+                    </a>
+                    <a href="https://figma.com/file/your-design-file" class="download-card" target="_blank">
+                        <i class="fas fa-palette"></i>
+                        <span>View Design File</span>
+                    </a>
+                    <a href="../assets/pdfs/A8-highfi-slides.pdf" class="download-card" target="_blank">
+                        <i class="fas fa-file-powerpoint"></i>
+                        <span>Presentation Slides</span>
+                    </a>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Final Design Showcase</h2>
+                <!-- EDIT: Add screenshots from your high-fi prototype -->
+                <div class="showcase-grid">
+                    <div class="showcase-item featured">
+                        <img src="../assets/images/A8-hero.png" alt="High-fi Hero" onerror="this.parentElement.querySelector('.media-placeholder').style.display='flex'">
+                        <div class="media-placeholder">
+                            <i class="fas fa-image"></i>
+                            <p>Hero Screen</p>
+                        </div>
+                        <p class="showcase-caption">Main landing experience</p>
+                    </div>
+
+                    <div class="showcase-item">
+                        <img src="../assets/images/A8-screen1.png" alt="High-fi Screen 1" onerror="this.parentElement.querySelector('.media-placeholder').style.display='flex'">
+                        <div class="media-placeholder">
+                            <i class="fas fa-image"></i>
+                            <p>Screen 1</p>
+                        </div>
+                        <p class="showcase-caption">Feature showcase</p>
+                    </div>
+
+                    <div class="showcase-item">
+                        <img src="../assets/images/A8-screen2.png" alt="High-fi Screen 2" onerror="this.parentElement.querySelector('.media-placeholder').style.display='flex'">
+                        <div class="media-placeholder">
+                            <i class="fas fa-image"></i>
+                            <p>Screen 2</p>
+                        </div>
+                        <p class="showcase-caption">Interaction detail</p>
+                    </div>
+
+                    <div class="showcase-item">
+                        <img src="../assets/images/A8-screen3.png" alt="High-fi Screen 3" onerror="this.parentElement.querySelector('.media-placeholder').style.display='flex'">
+                        <div class="media-placeholder">
+                            <i class="fas fa-image"></i>
+                            <p>Screen 3</p>
+                        </div>
+                        <p class="showcase-caption">Supporting features</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-section bg-light">
+                <h2>Design System</h2>
+                <!-- EDIT: Show your design system elements -->
+                <div class="design-system">
+                    <div class="system-section">
+                        <h3><i class="fas fa-palette"></i> Color Palette</h3>
+                        <div class="color-swatches">
+                            <div class="color-swatch" style="background: #8C1515;">
+                                <span>#8C1515</span>
+                                <p>Primary</p>
+                            </div>
+                            <div class="color-swatch" style="background: #2E2D29;">
+                                <span>#2E2D29</span>
+                                <p>Text</p>
+                            </div>
+                            <div class="color-swatch" style="background: #FFFFFF; border: 1px solid #ddd;">
+                                <span>#FFFFFF</span>
+                                <p>Background</p>
+                            </div>
+                            <div class="color-swatch" style="background: #F4F4F4;">
+                                <span>#F4F4F4</span>
+                                <p>Secondary</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="system-section">
+                        <h3><i class="fas fa-font"></i> Typography</h3>
+                        <div class="typography-sample">
+                            <p style="font-size: 32px; font-weight: 700; margin: 10px 0;">Heading 1 - Inter Bold 32px</p>
+                            <p style="font-size: 24px; font-weight: 600; margin: 10px 0;">Heading 2 - Inter Semibold 24px</p>
+                            <p style="font-size: 18px; font-weight: 500; margin: 10px 0;">Heading 3 - Inter Medium 18px</p>
+                            <p style="font-size: 16px; margin: 10px 0;">Body - Inter Regular 16px</p>
+                        </div>
+                    </div>
+
+                    <div class="system-section">
+                        <h3><i class="fas fa-shapes"></i> Components</h3>
+                        <p>Reusable buttons, cards, forms, and navigation elements ensure consistency across all screens.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-section">
+                <h2>Key Features</h2>
+                <!-- EDIT: Highlight main features of your prototype -->
+                <div class="features-showcase">
+                    <div class="feature-detail">
+                        <div class="feature-icon-large">
+                            <i class="fas fa-magic"></i>
+                        </div>
+                        <div class="feature-detail-content">
+                            <h3>Feature Name</h3>
+                            <p>Detailed description of this key feature, how it works, and what user need it addresses. Explain the interaction and value proposition.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-detail">
+                        <div class="feature-icon-large">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div class="feature-detail-content">
+                            <h3>Feature Name</h3>
+                            <p>Detailed description of this key feature, how it works, and what user need it addresses. Explain the interaction and value proposition.</p>
+                        </div>
+                    </div>
+
+                    <div class="feature-detail">
+                        <div class="feature-icon-large">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <div class="feature-detail-content">
+                            <h3>Feature Name</h3>
+                            <p>Detailed description of this key feature, how it works, and what user need it addresses. Explain the interaction and value proposition.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="content-section bg-light">
+                <h2>Iterations from Medium-Fi</h2>
+                <!-- EDIT: Show what changed from medium to high fidelity -->
+                <div class="iteration-list">
+                    <div class="iteration-item">
+                        <h4><i class="fas fa-arrow-right"></i> Visual Design</h4>
+                        <p>Added color, typography, and imagery to create an engaging and polished aesthetic that aligns with our brand.</p>
+                    </div>
+
+                    <div class="iteration-item">
+                        <h4><i class="fas fa-arrow-right"></i> Micro-interactions</h4>
+                        <p>Implemented subtle animations and transitions to provide feedback and create a more delightful user experience.</p>
+                    </div>
+
+                    <div class="iteration-item">
+                        <h4><i class="fas fa-arrow-right"></i> Content Refinement</h4>
+                        <p>Polished all copy, added real content, and ensured messaging clearly communicates value to users.</p>
+                    </div>
+
+                    <div class="iteration-item">
+                        <h4><i class="fas fa-arrow-right"></i> Accessibility</h4>
+                        <p>Ensured proper color contrast, added alt text, and verified keyboard navigation for inclusive design.</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="assignment-nav">
+                <a href="./A6-mediumfi.html" class="btn btn-outline">
+                    <i class="fas fa-arrow-left"></i> Previous: Medium-Fi Prototype
+                </a>
+                <a href="./A9-heuristics.html" class="btn btn-primary">
+                    Next: Heuristic Evaluation <i class="fas fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>CS 147 Project</h4>
+                    <p>Introduction to Human-Computer Interaction</p>
+                    <p>Stanford University | Autumn 2025</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul class="footer-links">
+                        <li><a href="../index.html">Home</a></li>
+                        <li><a href="../about.html">About</a></li>
+                        <li><a href="../deliverables.html">Deliverables</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Course Info</h4>
+                    <ul class="footer-links">
+                        <li><a href="http://cs147.stanford.edu" target="_blank">CS 147 Course Site</a></li>
+                        <li><a href="http://hci.stanford.edu" target="_blank">Stanford HCI Group</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 CS 147 Project Team. Taught by Prof. James Landay.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../assets/js/main.js"></script>
+</body>
+</html>
