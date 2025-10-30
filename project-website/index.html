@@ -15,10 +15,6 @@
     <style>
       @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
     </style>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
 
     <!-- Font Awesome -->
     <link
@@ -26,11 +22,558 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
     />
 
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="./assets/css/style.css" />
+    <style>
+      /* ==========================
+         KYRO - SINGLE PAGE SITE
+         ========================== */
+
+      /* === SMOOTH SCROLLING === */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* === GLOBAL RESET === */
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family: "DM Sans", sans-serif;
+        color: #2d2d2d;
+        line-height: 1.6;
+        background: linear-gradient(
+          to bottom,
+          #dddac2 0%,
+          #1b969f 65%,
+          #8fbd41 100%
+        );
+        background-attachment: fixed;
+        background-size: cover;
+      }
+
+      /* === TYPOGRAPHY === */
+      h1,
+      h2,
+      h3,
+      h4 {
+        font-weight: 600;
+        color: #222;
+      }
+
+      h1.hero-title {
+        font-size: 6rem;
+        font-weight: 700;
+        letter-spacing: -0.5px;
+        color: #250f02;
+      }
+
+      h2.section-title {
+        text-align: center;
+        font-size: 2rem;
+        margin-bottom: 1rem;
+        color: #183c36;
+      }
+
+      p {
+        color: #333;
+        font-weight: 400;
+      }
+
+      .section-subtitle {
+        text-align: center;
+        color: #436f67;
+        margin-bottom: 2.5rem;
+      }
+
+      /* === NAVBAR === */
+      .navbar {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(8px);
+        padding: 1rem 0;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+        position: sticky;
+        top: 0;
+        z-index: 999;
+      }
+
+      .navbar .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 90%;
+        max-width: 1100px;
+        margin: auto;
+      }
+
+      .nav-brand {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        font-size: 1.25rem;
+        font-weight: 600;
+        color: #1b403b;
+      }
+
+      .logo {
+        height: 36px;
+      }
+
+      .nav-menu {
+        display: flex;
+        gap: 1.5rem;
+        list-style: none;
+      }
+
+      .nav-menu a {
+        text-decoration: none;
+        color: #1b403b;
+        font-weight: 500;
+        transition: color 0.3s;
+      }
+
+      .nav-menu a:hover,
+      .nav-menu a.active {
+        color: #8fbd41;
+      }
+
+      .mobile-toggle {
+        display: none;
+        background: none;
+        border: none;
+        cursor: pointer;
+        flex-direction: column;
+        gap: 4px;
+      }
+
+      .hamburger {
+        display: block;
+        width: 24px;
+        height: 2px;
+        background: #1b403b;
+      }
+
+      /* === HERO SECTION === */
+      .hero {
+        padding: 5rem 1rem;
+        text-align: center;
+        border-radius: 24px;
+        width: 90%;
+        max-width: 1000px;
+        margin: 3rem auto;
+      }
+
+      .hero-title {
+        color: #250f02;
+      }
+
+      .hero-tagline {
+        color: #250f02;
+        margin-top: 0.5rem;
+        font-weight: bolder;
+        font-size: 1.2rem;
+      }
+
+      .hero-description {
+        margin: 1.5rem auto;
+        max-width: 700px;
+      }
+
+      .hero-buttons {
+        margin-top: 1.5rem;
+      }
+
+      /* === BUTTONS === */
+      .btn {
+        display: inline-block;
+        padding: 0.8rem 1.6rem;
+        margin: 0.7rem;
+        border-radius: 40px;
+        text-decoration: none;
+        font-weight: 600;
+        transition: all 0.3s ease;
+      }
+
+      .btn-primary {
+        background-color: #1b403b;
+        color: white;
+      }
+
+      .btn-primary:hover {
+        background-color: #2c6a60;
+        transform: translateY(-2px);
+      }
+
+      .btn-secondary {
+        background-color: #ea604a;
+        color: white;
+      }
+
+      .btn-secondary:hover {
+        background-color: #cc4d3b;
+        transform: translateY(-2px);
+      }
+
+      .btn-outline {
+        background-color: transparent;
+        color: #1b403b;
+        border: 2px solid #1b403b;
+      }
+
+      .btn-outline:hover {
+        background-color: #1b403b;
+        color: white;
+      }
+
+      /* === SECTIONS === */
+      .section {
+        padding: 4rem 0;
+        width: 90%;
+        max-width: 1100px;
+        margin: auto;
+      }
+
+      .bg-light {
+        background: rgba(255, 255, 255, 0.4);
+        border-radius: 24px;
+        padding: 3rem 2rem;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+      }
+
+      /* === FEATURE CARDS === */
+      .features-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+
+      .feature-card {
+        text-align: center;
+        padding: 2rem;
+      }
+
+      .feature-icon {
+        font-size: 3rem;
+        color: #1b403b;
+        margin-bottom: 1rem;
+      }
+
+      .feature-card h3 {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+        color: #183c36;
+      }
+
+      /* === DESIGN PROCESS / DELIVERABLES === */
+      .deliverables-table {
+        background: white;
+        border-radius: 16px;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+        overflow: hidden;
+        margin: 3rem 0;
+      }
+
+      .table-header {
+        background: linear-gradient(135deg, #1b403b 0%, #2c6a60 100%);
+        color: white;
+        padding: 1.5rem;
+        text-align: center;
+      }
+
+      .table-header h3 {
+        font-size: 1.75rem;
+        font-weight: 600;
+        margin-bottom: 0.25rem;
+        color: white;
+      }
+
+      .table-header p {
+        opacity: 0.95;
+        font-size: 0.95rem;
+        color: white;
+      }
+
+      .deliverable-row {
+        display: grid;
+        grid-template-columns: 60px 1fr auto;
+        align-items: center;
+        gap: 1.5rem;
+        padding: 1.5rem;
+        border-bottom: 1px solid #e9f0ff;
+        transition: background 0.2s ease;
+      }
+
+      .deliverable-row:hover {
+        background: #f8faff;
+      }
+
+      .deliverable-row:nth-child(even) {
+        background: #fafbff;
+      }
+
+      .deliverable-row:nth-child(even):hover {
+        background: #f0f4ff;
+      }
+
+      .deliverable-row:last-child {
+        border-bottom: none;
+      }
+
+      .deliverable-icon {
+        width: 50px;
+        height: 50px;
+        border-radius: 12px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.5rem;
+        color: white;
+      }
+
+      .icon-research {
+        background: linear-gradient(135deg, #4c7cf3, #6b92f7);
+      }
+      .icon-ideate {
+        background: linear-gradient(135deg, #ea604a, #f07b68);
+      }
+      .icon-prototype {
+        background: linear-gradient(135deg, #7cb7c6, #9bccd8);
+      }
+      .icon-test {
+        background: linear-gradient(135deg, #9cc3b0, #b3d5c7);
+      }
+
+      .deliverable-info h4 {
+        font-size: 1.2rem;
+        font-weight: 600;
+        color: #1b403b;
+        margin-bottom: 0.25rem;
+      }
+
+      .deliverable-info p {
+        font-size: 0.9rem;
+        color: #666;
+        margin: 0;
+      }
+
+      .deliverable-actions {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        justify-content: flex-end;
+      }
+
+      .btn-small {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        padding: 0.6rem 1.2rem;
+        border-radius: 24px;
+        text-decoration: none;
+        font-size: 0.875rem;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        border: none;
+        cursor: pointer;
+      }
+
+      .btn-small.btn-primary {
+        background: #1b403b;
+        color: white;
+      }
+
+      .btn-small.btn-primary:hover {
+        background: #2c6a60;
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(27, 64, 59, 0.3);
+      }
+
+      .btn-small.btn-secondary {
+        background: #e9f0ff;
+        color: #4c7cf3;
+      }
+
+      .btn-small.btn-secondary:hover {
+        background: #d4e4ff;
+      }
+
+      .coming-soon {
+        background: #f0f0f0 !important;
+        cursor: default;
+      }
+
+      .coming-soon:hover {
+        background: #f0f0f0 !important;
+      }
+
+      .coming-soon .deliverable-icon {
+        background: linear-gradient(135deg, #b0b0b0, #c8c8c8);
+        opacity: 0.6;
+      }
+
+      .coming-soon .deliverable-info h4,
+      .coming-soon .deliverable-info p {
+        color: #999;
+      }
+
+      .coming-soon-badge {
+        display: inline-flex;
+        align-items: center;
+        gap: 0.4rem;
+        padding: 0.5rem 1rem;
+        background: #e0e0e0;
+        color: #666;
+        border-radius: 20px;
+        font-size: 0.85rem;
+        font-weight: 600;
+      }
+
+      /* === VIDEO SECTION === */
+      .video-section {
+        margin: 3rem 0;
+      }
+
+      .video-container {
+        position: relative;
+        padding-bottom: 56.25%; /* 16:9 aspect ratio */
+        height: 0;
+        overflow: hidden;
+        border-radius: 16px;
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+        margin: 2rem 0;
+      }
+
+      .video-container iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        border: 0;
+      }
+
+      .video-caption {
+        text-align: center;
+        color: #436f67;
+        font-size: 0.95rem;
+        margin-top: 1rem;
+      }
+
+      /* === TEAM SECTION === */
+      .team-preview {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+        gap: 2rem;
+        margin-top: 2rem;
+      }
+
+      .team-member-mini {
+        flex: 1;
+        min-width: 150px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .member-avatar {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        overflow: hidden;
+        background: rgba(255, 255, 255, 0.3);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 1rem;
+        border: 3px solid rgba(255, 255, 255, 0.5);
+      }
+
+      .avatar-placeholder {
+        font-size: 3rem;
+        color: #1b403b;
+      }
+
+      .member-name {
+        font-weight: 600;
+        font-size: 1.2em;
+        color: #183c36;
+        margin-bottom: 0.25rem;
+      }
+
+      .member-role {
+        font-size: 0.95rem;
+        color: #436f67;
+      }
+
+      /* === FOOTER === */
+      .footer {
+        background: rgba(255, 255, 255, 0.5);
+        padding: 2rem 1rem;
+        text-align: center;
+        font-size: 0.9rem;
+        color: #3b3b3b;
+        margin-top: 4rem;
+        border-top: 1px solid rgba(0, 0, 0, 0.05);
+      }
+
+      .footer p {
+        margin: 0.5rem 0;
+      }
+
+      /* === RESPONSIVE === */
+      @media (max-width: 768px) {
+        h1.hero-title {
+          font-size: 3.5rem;
+        }
+
+        .nav-menu {
+          position: absolute;
+          top: 100%;
+          left: 0;
+          right: 0;
+          background: rgba(255, 255, 255, 0.95);
+          flex-direction: column;
+          padding: 1rem;
+          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          display: none;
+        }
+
+        .nav-menu.active {
+          display: flex;
+        }
+
+        .mobile-toggle {
+          display: flex;
+        }
+
+        .section {
+          width: 95%;
+        }
+
+        .deliverable-row {
+          grid-template-columns: 1fr;
+          text-align: center;
+          gap: 1rem;
+        }
+
+        .deliverable-icon {
+          margin: 0 auto;
+        }
+
+        .deliverable-actions {
+          justify-content: center;
+        }
+      }
+    </style>
   </head>
   <body>
-    <!-- Navigation -->
+    <!-- === NAVIGATION === -->
     <header>
       <nav class="navbar">
         <div class="container">
@@ -41,7 +584,7 @@
               class="logo"
               onerror="this.style.display='none'"
             />
-            <span class="project-title">Kyro</span>
+            <span>Kyro</span>
           </div>
 
           <button
@@ -55,260 +598,551 @@
           </button>
 
           <ul class="nav-menu" id="nav-menu">
-            <li><a href="./index.html" class="active">Home</a></li>
-            <li><a href="./about.html">About</a></li>
-            <li><a href="./deliverables.html">Process</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#process">Process</a></li>
+            <li><a href="#video">Video</a></li>
+            <li><a href="#deliverables">Deliverables</a></li>
+            <li><a href="#team">Team</a></li>
           </ul>
         </div>
       </nav>
     </header>
 
-    <!-- Hero -->
-    <section class="hero">
-      <div class="container">
-        <div class="hero-content">
-          <h1 class="hero-title">KYRO</h1>
-          <p class="hero-tagline">
-            Planning life by how you feel, not just by what you do
-          </p>
-          <p class="hero-description">
-            Kyro is an emotional scheduling app that helps users plan their time
-            based on how they feel and not just what they need to do. By
-            combining scheduling with emotional awareness, Kyro helps users
-            balance productivity and well-being, encouraging healthier routines
-            and joyful living.
-          </p>
-
-          <div class="hero-buttons">
-            <a href="./about.html" class="btn btn-primary"
-              ><i class="fas fa-users"></i> Meet the Team</a
-            >
-            <a href="./deliverables.html" class="btn btn-secondary"
-              ><i class="fas fa-folder-open"></i> View Process</a
-            >
-          </div>
-        </div>
-
-        <!-- <div class="hero-image">
-        <img
-          src="./assets/images/hero-mockup.png"
-          alt="Kyro App Mockup"
-          onerror="this.style.display='none'"
-        />
-        <div class="hero-placeholder">
-          <i class="fas fa-mobile-alt"></i>
-          <p>Kyro App Preview</p>
-        </div>
-      </div> -->
-      </div>
-    </section>
-
-    <!-- Overview -->
-    <section class="section bg-light">
-      <div class="container">
-        <h2 class="section-title">Project Overview</h2>
-
-        <div class="features-grid">
-          <div class="feature-card">
-            <div class="feature-icon">
-              <i class="fas fa-heart"></i>
-            </div>
-            <h3>The Problem</h3>
-            <p>
-              Productivity tools help people manage tasks and not emotions.
-              Students and young professionals often feel burnout, guilt, and
-              emotional fatigue despite keeping up with their to-do lists. Time
-              gets managed, but energy doesn’t. Kyro aims to bridge this gap.
-            </p>
-          </div>
-
-          <div class="feature-card">
-            <div class="feature-icon">
-              <i class="fas fa-user"></i>
-            </div>
-            <h3>Our Insight</h3>
-            <p>
-              Through interviews and surveys, we learned that people want to
-              feel in control of both their schedule and their state of mind.
-              Reflection doesn’t have to be complicated — it can be lightweight,
-              visual, and integrated into the tools people already use. That
-              way, when scheduling tasks, we not only take into account our time
-              availability, but our emotional availability as well.
-            </p>
-          </div>
-
-          <div class="feature-card">
-            <div class="feature-icon">
-              <i class="fas fa-seedling"></i>
-            </div>
-            <h3>The Solution</h3>
-            <p>
-              Kyro turns emotional awareness into part of planning. Users log
-              their moods, tag events with energy levels, and receive insights
-              like “time with friends boosts joy” or “late nights increase
-              stress.” Over time, Kyro helps users schedule for balance and
-              prevent burnout.
-            </p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- Team -->
-    <section class="section">
-      <div class="container">
-        <h2 class="section-title">Our Team</h2>
-        <p class="section-subtitle">CS 147: Design for Mental Wellbeing</p>
-
-        <!-- <div class="team-member-mini">
-            <div class="member-avatar">
-              <img src="./assets/images/Headshots/amesha.JPG" alt="Amesha B." class="avatar-image">
-              </div>
-            </div>
-            <p class="member-name">Amesha B.</p>
-            <p class="member-role">Developer and User Researcher</p>
-          </div> -->
-
-        <div class="team-preview">
-          <div class="team-member-mini">
-            <div class="member-avatar">
-              <div class="avatar-placeholder">
-                <i class="fas fa-user"></i>
-              </div>
-            </div>
-            <p class="member-name">Gil S.</p>
-            <p class="member-role">Developer and User Researcher</p>
-          </div>
-
-          <div class="team-member-mini">
-            <div class="member-avatar">
-              <div class="avatar-placeholder">
-                <i class="fas fa-user"></i>
-              </div>
-            </div>
-            <p class="member-name">Gil S.</p>
-            <p class="member-role">Developer and User Researcher</p>
-          </div>
-
-          <div class="team-member-mini">
-            <div class="member-avatar">
-              <div class="avatar-placeholder">
-                <i class="fas fa-user"></i>
-              </div>
-            </div>
-            <p class="member-name">Bennie N.</p>
-            <p class="member-role">Designer and User Researcher</p>
-          </div>
-
-          <div class="team-member-mini">
-            <div class="member-avatar">
-              <div class="avatar-placeholder">
-                <i class="fas fa-user"></i>
-              </div>
-            </div>
-            <p class="member-name">Gabriella U.</p>
-            <p class="member-role">Designer and Developer</p>
-          </div>
-        </div>
-
-        <div class="text-center" style="margin-top: 2rem">
-          <a href="./about.html" class="btn btn-outline">Learn More About Us</a>
-        </div>
-      </div>
-    </section>
-
-    <!-- Process Timeline -->
-    <section class="section bg-light">
-      <div class="container">
-        <h2 class="section-title">Our Design Journey</h2>
-        <p class="section-subtitle">
-          Explore our process — from needfinding to high-fidelity prototypes
+    <!-- === HERO SECTION === -->
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <h1 class="hero-title">KYRO</h1>
+        <p class="hero-tagline">
+          Planning life by how you feel, not just by what you do
+        </p>
+        <p class="hero-description">
+          Kyro is an emotional scheduling app that helps users plan their time
+          based on how they feel and not just what they need to do. By combining
+          scheduling with emotional awareness, Kyro helps users balance
+          productivity and well-being, encouraging healthier routines and joyful
+          living.
         </p>
 
-        <div class="journey-timeline">
-          <div class="timeline-item">
-            <div class="timeline-icon"><i class="fas fa-search"></i></div>
-            <h3>Needfinding</h3>
-            <p>Interviews & emotional mapping research</p>
-            <a href="./assignments/A1-needfinding.html" class="timeline-link"
-              >View →</a
-            >
-          </div>
+        <div class="hero-buttons">
+          <a href="#team" class="btn btn-primary">
+            <i class="fas fa-users"></i> Meet the Team
+          </a>
+          <a href="#process" class="btn btn-secondary">
+            <i class="fas fa-folder-open"></i> View Process
+          </a>
+        </div>
+      </div>
+    </section>
 
-          <div class="timeline-item">
-            <div class="timeline-icon"><i class="fas fa-pencil-ruler"></i></div>
-            <h3>Prototyping</h3>
-            <p>Low-fi and mid-fi iterations through user feedback</p>
-            <a href="./assignments/A5-lowfi.html" class="timeline-link"
-              >View →</a
-            >
-          </div>
+    <!-- === PROJECT OVERVIEW === -->
+    <section class="section bg-light" id="overview">
+      <h2 class="section-title">Project Overview</h2>
 
-          <div class="timeline-item">
-            <div class="timeline-icon"><i class="fas fa-video"></i></div>
-            <h3>Concept Video</h3>
-            <p>Visualizing how Kyro fits into daily life</p>
-            <a href="./assignments/A4-concept-video.html" class="timeline-link"
-              >View →</a
-            >
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-heart"></i>
           </div>
+          <h3>The Problem</h3>
+          <p>
+            Productivity tools help people manage tasks and not emotions.
+            Students and young professionals often feel burnout, guilt, and
+            emotional fatigue despite keeping up with their to-do lists. Time
+            gets managed, but energy doesn't. Kyro aims to bridge this gap.
+          </p>
+        </div>
 
-          <div class="timeline-item">
-            <div class="timeline-icon">
-              <i class="fas fa-clipboard-check"></i>
-            </div>
-            <h3>Final Report</h3>
-            <p>Design documentation & reflections</p>
-            <a href="./assignments/A11-finalreport.html" class="timeline-link"
-              >View →</a
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-user"></i>
+          </div>
+          <h3>Our Insight</h3>
+          <p>
+            Through interviews and surveys, we learned that people want to feel
+            in control of both their schedule and their state of mind.
+            Reflection doesn't have to be complicated — it can be lightweight,
+            visual, and integrated into the tools people already use. That way,
+            when scheduling tasks, we not only take into account our time
+            availability, but our emotional availability as well.
+          </p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">
+            <i class="fas fa-seedling"></i>
+          </div>
+          <h3>The Solution</h3>
+          <p>
+            Kyro turns emotional awareness into part of planning. Users log
+            their moods, tag events with energy levels, and receive insights
+            like "time with friends boosts joy" or "late nights increase
+            stress." Over time, Kyro helps users schedule for balance and
+            prevent burnout.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- === DESIGN PROCESS OVERVIEW === -->
+    <section class="section" id="process">
+      <h2 class="section-title">Our Design Process</h2>
+      <p class="section-subtitle">
+        From needfinding to high-fidelity prototypes — here's our journey
+      </p>
+
+      <div class="deliverables-table">
+        <div class="table-header">
+          <h3>Design Phases</h3>
+          <p>Research, ideation, prototyping, and testing</p>
+        </div>
+
+        <!-- A1: NEEDFINDING -->
+        <div class="deliverable-row">
+          <div class="deliverable-icon icon-research">
+            <i class="fas fa-search"></i>
+          </div>
+          <div class="deliverable-info">
+            <h4>A1 — Needfinding</h4>
+            <p>User interviews and emotional reflection insights</p>
+          </div>
+          <div class="deliverable-actions">
+            <a
+              href="./assets/pdfs/A1_needfinding.pdf"
+              class="btn-small btn-primary"
+              target="_blank"
             >
+              <i class="fas fa-file-pdf"></i> PDF
+            </a>
+            <a
+              href="./assets/pdfs/A1_needfinding.pptx"
+              class="btn-small btn-secondary"
+              download
+            >
+              <i class="fas fa-file-powerpoint"></i> PPTX
+            </a>
+          </div>
+        </div>
+
+        <!-- A2: POVs & HMWs -->
+        <div class="deliverable-row">
+          <div class="deliverable-icon icon-ideate">
+            <i class="fas fa-lightbulb"></i>
+          </div>
+          <div class="deliverable-info">
+            <h4>A2 — POVs, HMWs, Experience Prototypes</h4>
+            <p>Problem reframing and idea generation</p>
+          </div>
+          <div class="deliverable-actions">
+            <a
+              href="./assets/pdfs/A2_POVs.pdf"
+              class="btn-small btn-primary"
+              target="_blank"
+            >
+              <i class="fas fa-file-pdf"></i> PDF
+            </a>
+            <a
+              href="./assets/pdfs/A2_POVs.pptx"
+              class="btn-small btn-secondary"
+              download
+            >
+              <i class="fas fa-file-powerpoint"></i> PPTX
+            </a>
+          </div>
+        </div>
+
+        <!-- A4: CONCEPT VIDEO -->
+        <div class="deliverable-row">
+          <div class="deliverable-icon icon-prototype">
+            <i class="fas fa-video"></i>
+          </div>
+          <div class="deliverable-info">
+            <h4>A4 — Concept Video</h4>
+            <p>Kyro demo video and narrative concept</p>
+          </div>
+          <div class="deliverable-actions">
+            <a href="#video" class="btn-small btn-primary">
+              <i class="fab fa-youtube"></i> Watch
+            </a>
+            <a
+              href="./assets/pdfs/A4_concept_video.pdf"
+              class="btn-small btn-secondary"
+              target="_blank"
+            >
+              <i class="fas fa-file-pdf"></i> PDF
+            </a>
+            <a
+              href="./assets/pdfs/A4_concept_video.pptx"
+              class="btn-small btn-secondary"
+              download
+            >
+              <i class="fas fa-file-powerpoint"></i> PPTX
+            </a>
+          </div>
+        </div>
+
+        <!-- A5: LOW-FI PROTOTYPE -->
+        <div class="deliverable-row">
+          <div class="deliverable-icon icon-prototype">
+            <i class="fas fa-pencil-ruler"></i>
+          </div>
+          <div class="deliverable-info">
+            <h4>A5 — Low-Fi Prototype</h4>
+            <p>Paper prototypes and early interface sketches</p>
+          </div>
+          <div class="deliverable-actions">
+            <a
+              href="./assets/pdfs/A5_lowfi.pdf"
+              class="btn-small btn-primary"
+              target="_blank"
+            >
+              <i class="fas fa-file-pdf"></i> PDF
+            </a>
+            <a
+              href="./assets/pdfs/A5_lowfi.pptx"
+              class="btn-small btn-secondary"
+              download
+            >
+              <i class="fas fa-file-powerpoint"></i> PPTX
+            </a>
+          </div>
+        </div>
+
+        <!-- A6: MEDIUM-FI PROTOTYPE (COMING SOON) -->
+        <div class="deliverable-row coming-soon">
+          <div class="deliverable-icon icon-prototype">
+            <i class="fas fa-tablet-alt"></i>
+          </div>
+          <div class="deliverable-info">
+            <h4>A6 — Medium-Fi Prototype</h4>
+            <p>Digital wireframes with interactivity</p>
+          </div>
+          <div class="deliverable-actions">
+            <span class="coming-soon-badge">
+              <i class="fas fa-clock"></i> Coming Soon
+            </span>
+          </div>
+        </div>
+
+        <!-- A8: HIGH-FI PROTOTYPE (COMING SOON) -->
+        <div class="deliverable-row coming-soon">
+          <div class="deliverable-icon icon-prototype">
+            <i class="fas fa-mobile-alt"></i>
+          </div>
+          <div class="deliverable-info">
+            <h4>A8 — High-Fi Prototype</h4>
+            <p>Fully interactive, polished prototype</p>
+          </div>
+          <div class="deliverable-actions">
+            <span class="coming-soon-badge">
+              <i class="fas fa-clock"></i> Coming Soon
+            </span>
+          </div>
+        </div>
+
+        <!-- A9: HEURISTIC EVALUATION (COMING SOON) -->
+        <div class="deliverable-row coming-soon">
+          <div class="deliverable-icon icon-test">
+            <i class="fas fa-clipboard-check"></i>
+          </div>
+          <div class="deliverable-info">
+            <h4>A9 — Heuristic Evaluation</h4>
+            <p>Expert usability assessment</p>
+          </div>
+          <div class="deliverable-actions">
+            <span class="coming-soon-badge">
+              <i class="fas fa-clock"></i> Coming Soon
+            </span>
+          </div>
+        </div>
+
+        <!-- A10: POSTER (COMING SOON) -->
+        <div class="deliverable-row coming-soon">
+          <div class="deliverable-icon icon-test">
+            <i class="fas fa-image"></i>
+          </div>
+          <div class="deliverable-info">
+            <h4>A10 — Poster & Demo</h4>
+            <p>Visual summary and presentation materials</p>
+          </div>
+          <div class="deliverable-actions">
+            <span class="coming-soon-badge">
+              <i class="fas fa-clock"></i> Coming Soon
+            </span>
+          </div>
+        </div>
+
+        <!-- A11: FINAL REPORT (COMING SOON) -->
+        <div class="deliverable-row coming-soon">
+          <div class="deliverable-icon icon-test">
+            <i class="fas fa-file-alt"></i>
+          </div>
+          <div class="deliverable-info">
+            <h4>A11 — Final Report</h4>
+            <p>Complete design documentation</p>
+          </div>
+          <div class="deliverable-actions">
+            <span class="coming-soon-badge">
+              <i class="fas fa-clock"></i> Coming Soon
+            </span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-content">
-          <div class="footer-section">
-            <h4>CS 147 Project</h4>
-            <p>Introduction to Human-Computer Interaction</p>
-            <p>Stanford University | Autumn 2025</p>
-          </div>
+    <!-- === CONCEPT VIDEO === -->
+    <section class="section bg-light" id="video">
+      <h2 class="section-title">Concept Video</h2>
+      <p class="section-subtitle">
+        Watch how Kyro helps users balance productivity and well-being
+      </p>
 
-          <div class="footer-section">
-            <h4>Quick Links</h4>
-            <ul class="footer-links">
-              <li><a href="./index.html">Home</a></li>
-              <li><a href="./about.html">About</a></li>
-              <li><a href="./deliverables.html">Process</a></li>
-            </ul>
-          </div>
+      <div class="video-section">
+        <div class="video-container">
+          <iframe
+            src="https://www.youtube.com/embed/qdsYI2bFyH0"
+            title="Kyro Concept Video"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+          >
+          </iframe>
+        </div>
+        <p class="video-caption">
+          <i class="fas fa-info-circle"></i> Kyro: Planning life by how you
+          feel, not just by what you do
+        </p>
+      </div>
+    </section>
 
-          <div class="footer-section">
-            <h4>Course Info</h4>
-            <ul class="footer-links">
-              <li>
-                <a href="http://cs147.stanford.edu" target="_blank"
-                  >CS 147 Course Site</a
-                >
-              </li>
-              <li>
-                <a href="http://hci.stanford.edu" target="_blank"
-                  >Stanford HCI Group</a
-                >
-              </li>
-            </ul>
+    <!-- === FINAL DELIVERABLES === -->
+    <section class="section" id="deliverables">
+      <h2 class="section-title">All Project Files</h2>
+      <p class="section-subtitle">
+        Download PDFs, presentations, and supplementary materials
+      </p>
+
+      <div class="deliverables-table">
+        <div class="table-header">
+          <h3>Complete Deliverables</h3>
+          <p>All research, prototypes, and documentation</p>
+        </div>
+
+        <div class="deliverable-row">
+          <div class="deliverable-icon icon-research">
+            <i class="fas fa-file-alt"></i>
+          </div>
+          <div class="deliverable-info">
+            <h4>Needfinding Report & Slides</h4>
+            <p>A1 — User research documentation</p>
+          </div>
+          <div class="deliverable-actions">
+            <a
+              href="./assets/pdfs/A1_needfinding.pdf"
+              class="btn-small btn-primary"
+              target="_blank"
+            >
+              <i class="fas fa-file-pdf"></i> PDF
+            </a>
+            <a
+              href="./assets/pdfs/A1_needfinding.pptx"
+              class="btn-small btn-secondary"
+              download
+            >
+              <i class="fas fa-download"></i> PPTX
+            </a>
           </div>
         </div>
 
-        <div class="footer-bottom">
-          <p>&copy; 2025 Kyro Team | Design for Mental Wellbeing — CS 147</p>
+        <div class="deliverable-row">
+          <div class="deliverable-icon icon-ideate">
+            <i class="fas fa-file-alt"></i>
+          </div>
+          <div class="deliverable-info">
+            <h4>POVs & HMWs Report & Slides</h4>
+            <p>A2 — Problem framing documentation</p>
+          </div>
+          <div class="deliverable-actions">
+            <a
+              href="./assets/pdfs/A2_POVs.pdf"
+              class="btn-small btn-primary"
+              target="_blank"
+            >
+              <i class="fas fa-file-pdf"></i> PDF
+            </a>
+            <a
+              href="./assets/pdfs/A2_POVs.pptx"
+              class="btn-small btn-secondary"
+              download
+            >
+              <i class="fas fa-download"></i> PPTX
+            </a>
+          </div>
+        </div>
+
+        <div class="deliverable-row">
+          <div class="deliverable-icon icon-prototype">
+            <i class="fas fa-video"></i>
+          </div>
+          <div class="deliverable-info">
+            <h4>Concept Video & Materials</h4>
+            <p>A4 — Video demonstration and slides</p>
+          </div>
+          <div class="deliverable-actions">
+            <a
+              href="https://www.youtube.com/watch?v=qdsYI2bFyH0"
+              class="btn-small btn-primary"
+              target="_blank"
+            >
+              <i class="fab fa-youtube"></i> YouTube
+            </a>
+            <a
+              href="./assets/videos/A4_concept_video.mp4"
+              class="btn-small btn-secondary"
+              target="_blank"
+            >
+              <i class="fas fa-play"></i> MP4
+            </a>
+            <a
+              href="./assets/pdfs/A4_concept_video.pdf"
+              class="btn-small btn-secondary"
+              target="_blank"
+            >
+              <i class="fas fa-file-pdf"></i> PDF
+            </a>
+            <a
+              href="./assets/pdfs/A4_concept_video.pptx"
+              class="btn-small btn-secondary"
+              download
+            >
+              <i class="fas fa-download"></i> PPTX
+            </a>
+          </div>
+        </div>
+
+        <div class="deliverable-row">
+          <div class="deliverable-icon icon-prototype">
+            <i class="fas fa-file-alt"></i>
+          </div>
+          <div class="deliverable-info">
+            <h4>Low-Fi Prototype & Slides</h4>
+            <p>A5 — Paper prototype documentation</p>
+          </div>
+          <div class="deliverable-actions">
+            <a
+              href="./assets/pdfs/A5_lowfi.pdf"
+              class="btn-small btn-primary"
+              target="_blank"
+            >
+              <i class="fas fa-file-pdf"></i> PDF
+            </a>
+            <a
+              href="./assets/pdfs/A5_lowfi.pptx"
+              class="btn-small btn-secondary"
+              download
+            >
+              <i class="fas fa-download"></i> PPTX
+            </a>
+          </div>
         </div>
       </div>
+    </section>
+
+    <!-- === TEAM SECTION === -->
+    <section class="section bg-light" id="team">
+      <h2 class="section-title">Our Team</h2>
+      <p class="section-subtitle">CS 147: Design for Mental Wellbeing</p>
+
+      <div class="team-preview">
+        <div class="team-member-mini">
+          <div class="member-avatar">
+            <img
+              src="./assets/images/Headshots/amesha_banjara.JPG"
+              alt="Amesha Banjara"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 50%;
+              "
+            />
+          </div>
+          <p class="member-name">Amesha B.</p>
+          <p class="member-role">Developer and User Researcher</p>
+        </div>
+
+        <div class="team-member-mini">
+          <div class="member-avatar">
+            <img
+              src="./assets/images/Headshots/gil_silva.jpeg"
+              alt="Gil Silva"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 50%;
+              "
+            />
+          </div>
+          <p class="member-name">Gil S.</p>
+          <p class="member-role">Developer and User Researcher</p>
+        </div>
+
+        <div class="team-member-mini">
+          <div class="member-avatar">
+            <img
+              src="./assets/images/Headshots/bennie_nkwantabisa.jpg"
+              alt="Bennie Nkwantabisa"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 50%;
+              "
+            />
+          </div>
+          <p class="member-name">Bennie N.</p>
+          <p class="member-role">Designer and User Researcher</p>
+        </div>
+
+        <div class="team-member-mini">
+          <div class="member-avatar">
+            <img
+              src="./assets/images/Headshots/gabriella_ugwonali.jpg"
+              alt="Gabriella Ugwonali"
+              style="
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 50%;
+              "
+            />
+          </div>
+          <p class="member-name">Gabriella U.</p>
+          <p class="member-role">Designer and Developer</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- === FOOTER === -->
+    <footer class="footer">
+      <p><strong>© Kyro – CS 147 Fall 2025</strong></p>
+      <p>Stanford University | Introduction to Human-Computer Interaction</p>
+      <p>
+        <a
+          href="http://cs147.stanford.edu"
+          target="_blank"
+          style="color: #1b403b"
+          >CS 147 Course Site</a
+        >
+        |
+        <a href="http://hci.stanford.edu" target="_blank" style="color: #1b403b"
+          >Stanford HCI Group</a
+        >
+      </p>
     </footer>
 
+    <!-- === JAVASCRIPT === -->
     <script src="./assets/js/main.js"></script>
   </body>
 </html>
