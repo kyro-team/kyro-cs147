@@ -1,90 +1,95 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta
-    name="description"
-    content="Kyro – An emotional scheduling app designed for mental wellbeing | CS 147 Project at Stanford University"
-  />
-  <title>Kyro | CS 147</title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Kyro – An emotional scheduling app designed for mental wellbeing | CS 147 Project at Stanford University"
+    />
+    <title>Kyro | CS 147</title>
 
-  <!-- Google Fonts -->
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
-    rel="stylesheet"
-  />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&display=swap");
+    </style>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Font Awesome -->
-  <link
-    rel="stylesheet"
-    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-  />
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
 
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="./assets/css/style.css" />
-</head>
-<body>
-  <!-- Navigation -->
-  <header>
-    <nav class="navbar">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <!-- Navigation -->
+    <header>
+      <nav class="navbar">
+        <div class="container">
+          <div class="nav-brand">
+            <img
+              src="./assets/images/logo.png"
+              alt="Kyro Logo"
+              class="logo"
+              onerror="this.style.display='none'"
+            />
+            <span class="project-title">Kyro</span>
+          </div>
+
+          <button
+            class="mobile-toggle"
+            id="mobile-toggle"
+            aria-label="Toggle navigation"
+          >
+            <span class="hamburger"></span>
+            <span class="hamburger"></span>
+            <span class="hamburger"></span>
+          </button>
+
+          <ul class="nav-menu" id="nav-menu">
+            <li><a href="./index.html" class="active">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./deliverables.html">Process</a></li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Hero -->
+    <section class="hero">
       <div class="container">
-        <div class="nav-brand">
-          <img
-            src="./assets/images/logo.png"
-            alt="Kyro Logo"
-            class="logo"
-            onerror="this.style.display='none'"
-          />
-          <span class="project-title">Kyro</span>
+        <div class="hero-content">
+          <h1 class="hero-title">KYRO</h1>
+          <p class="hero-tagline">
+            Planning life by how you feel, not just by what you do
+          </p>
+          <p class="hero-description">
+            Kyro is an emotional scheduling app that helps users plan their time
+            based on how they feel and not just what they need to do. By
+            combining scheduling with emotional awareness, Kyro helps users
+            balance productivity and well-being, encouraging healthier routines
+            and joyful living.
+          </p>
+
+          <div class="hero-buttons">
+            <a href="./about.html" class="btn btn-primary"
+              ><i class="fas fa-users"></i> Meet the Team</a
+            >
+            <a href="./deliverables.html" class="btn btn-secondary"
+              ><i class="fas fa-folder-open"></i> View Process</a
+            >
+          </div>
         </div>
 
-        <button
-          class="mobile-toggle"
-          id="mobile-toggle"
-          aria-label="Toggle navigation"
-        >
-          <span class="hamburger"></span>
-          <span class="hamburger"></span>
-          <span class="hamburger"></span>
-        </button>
-
-        <ul class="nav-menu" id="nav-menu">
-          <li><a href="./index.html" class="active">Home</a></li>
-          <li><a href="./about.html">About</a></li>
-          <li><a href="./deliverables.html">Process</a></li>
-        </ul>
-      </div>
-    </nav>
-  </header>
-
-  <!-- Hero -->
-  <section class="hero">
-    <div class="container">
-      <div class="hero-content">
-        <h1 class="hero-title">Kyro</h1>
-        <p class="hero-tagline">You can’t pour from an empty cup.</p>
-        <p class="hero-description">
-          Kyro is an emotional scheduling app that helps users plan their time
-          based on how they feel and not just what they need to do. By combining
-          scheduling with emotional awareness, Kyro helps users balance
-          productivity and well-being, encouraging healthier routines and
-          joyful living.
-        </p>
-
-        <div class="hero-buttons">
-          <a href="./about.html" class="btn btn-primary"
-            ><i class="fas fa-users"></i> Meet the Team</a
-          >
-          <a href="./deliverables.html" class="btn btn-secondary"
-            ><i class="fas fa-folder-open"></i> View Process</a
-          >
-        </div>
-      </div>
-
-      <!-- <div class="hero-image">
+        <!-- <div class="hero-image">
         <img
           src="./assets/images/hero-mockup.png"
           alt="Kyro App Mockup"
@@ -95,204 +100,215 @@
           <p>Kyro App Preview</p>
         </div>
       </div> -->
-    </div>
-  </section>
-
-  <!-- Overview -->
-  <section class="section bg-light">
-    <div class="container">
-      <h2 class="section-title">Project Overview</h2>
-
-      <div class="features-grid">
-        <div class="feature-card">
-          <div class="feature-icon">
-            <i class="fas fa-heart"></i>
-          </div>
-          <h3>The Problem</h3>
-          <p>
-            Productivity tools help people manage tasks and not emotions.
-            Students and young professionals often feel burnout, guilt, and
-            emotional fatigue despite keeping up with their to-do lists. Time
-            gets managed, but energy doesn’t. Kyro aims to bridge this gap.
-          </p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon">
-            <i class="fas fa-user"></i>
-          </div>
-          <h3>Our Insight</h3>
-          <p>
-            Through interviews and surveys, we learned that people want to feel
-            in control of both their schedule and their state of mind.
-            Reflection doesn’t have to be complicated — it can be lightweight,
-            visual, and integrated into the tools people already use. That way, 
-            when scheduling tasks, we not only take into account our time 
-            availability, but our emotional availability as well.
-          </p>
-        </div>
-
-        <div class="feature-card">
-          <div class="feature-icon">
-            <i class="fas fa-seedling"></i>
-          </div>
-          <h3>The Solution</h3>
-          <p>
-            Kyro turns emotional awareness into part of planning. Users log
-            their moods, tag events with energy levels, and receive insights
-            like “time with friends boosts joy” or “late nights increase
-            stress.” Over time, Kyro helps users schedule for balance and prevent
-            burnout.
-          </p>
-        </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Team -->
-  <section class="section">
-    <div class="container">
-      <h2 class="section-title">Our Team</h2>
-      <p class="section-subtitle">CS 147: Design for Mental Wellbeing</p>
+    <!-- Overview -->
+    <section class="section bg-light">
+      <div class="container">
+        <h2 class="section-title">Project Overview</h2>
 
-      <div class="team-preview">
-        <div class="team-member-mini">
-          <div class="member-avatar">
-            <div class="avatar-placeholder">
+        <div class="features-grid">
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-heart"></i>
+            </div>
+            <h3>The Problem</h3>
+            <p>
+              Productivity tools help people manage tasks and not emotions.
+              Students and young professionals often feel burnout, guilt, and
+              emotional fatigue despite keeping up with their to-do lists. Time
+              gets managed, but energy doesn’t. Kyro aims to bridge this gap.
+            </p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">
               <i class="fas fa-user"></i>
             </div>
+            <h3>Our Insight</h3>
+            <p>
+              Through interviews and surveys, we learned that people want to
+              feel in control of both their schedule and their state of mind.
+              Reflection doesn’t have to be complicated — it can be lightweight,
+              visual, and integrated into the tools people already use. That
+              way, when scheduling tasks, we not only take into account our time
+              availability, but our emotional availability as well.
+            </p>
           </div>
-          <p class="member-name">Amesha B.</p>
-          <p class="member-role">Developer and User Researcher</p>
-        </div>
 
-        <div class="team-member-mini">
-          <div class="member-avatar">
-            <div class="avatar-placeholder">
-              <i class="fas fa-user"></i>
+          <div class="feature-card">
+            <div class="feature-icon">
+              <i class="fas fa-seedling"></i>
             </div>
+            <h3>The Solution</h3>
+            <p>
+              Kyro turns emotional awareness into part of planning. Users log
+              their moods, tag events with energy levels, and receive insights
+              like “time with friends boosts joy” or “late nights increase
+              stress.” Over time, Kyro helps users schedule for balance and
+              prevent burnout.
+            </p>
           </div>
-          <p class="member-name">Gil Silva</p>
-          <p class="member-role">Developer and User Researcher</p>
         </div>
+      </div>
+    </section>
 
-        <div class="team-member-mini">
-          <div class="member-avatar">
-            <div class="avatar-placeholder">
-              <i class="fas fa-user"></i>
+    <!-- Team -->
+    <section class="section">
+      <div class="container">
+        <h2 class="section-title">Our Team</h2>
+        <p class="section-subtitle">CS 147: Design for Mental Wellbeing</p>
+
+        <!-- <div class="team-member-mini">
+            <div class="member-avatar">
+              <img src="./assets/images/Headshots/amesha.JPG" alt="Amesha B." class="avatar-image">
+              </div>
             </div>
-          </div>
-          <p class="member-name">Bennie Nkwantabisa </p>
-          <p class="member-role">Designer and User Researcher</p>
-        </div>
+            <p class="member-name">Amesha B.</p>
+            <p class="member-role">Developer and User Researcher</p>
+          </div> -->
 
-        <div class="team-member-mini">
-          <div class="member-avatar">
-            <div class="avatar-placeholder">
-              <i class="fas fa-user"></i>
+        <div class="team-preview">
+          <div class="team-member-mini">
+            <div class="member-avatar">
+              <div class="avatar-placeholder">
+                <i class="fas fa-user"></i>
+              </div>
             </div>
+            <p class="member-name">Gil S.</p>
+            <p class="member-role">Developer and User Researcher</p>
           </div>
-          <p class="member-name">Gabriella Ugwonali</p>
-          <p class="member-role">Designer and User Researcher</p>
-        </div>
-      </div>
 
-      <div class="text-center" style="margin-top: 2rem;">
-        <a href="./about.html" class="btn btn-outline">Learn More About Us</a>
-      </div>
-    </div>
-  </section>
-
-  <!-- Process Timeline -->
-  <section class="section bg-light">
-    <div class="container">
-      <h2 class="section-title">Our Design Journey</h2>
-      <p class="section-subtitle">
-        Explore our process — from needfinding to high-fidelity prototypes
-      </p>
-
-      <div class="journey-timeline">
-        <div class="timeline-item">
-          <div class="timeline-icon"><i class="fas fa-search"></i></div>
-          <h3>Needfinding</h3>
-          <p>Interviews & emotional mapping research</p>
-          <a href="./assignments/A1-needfinding.html" class="timeline-link"
-            >View →</a
-          >
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-icon"><i class="fas fa-pencil-ruler"></i></div>
-          <h3>Prototyping</h3>
-          <p>Low-fi and mid-fi iterations through user feedback</p>
-          <a href="./assignments/A5-lowfi.html" class="timeline-link">View →</a>
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-icon"><i class="fas fa-video"></i></div>
-          <h3>Concept Video</h3>
-          <p>Visualizing how Kyro fits into daily life</p>
-          <a href="./assignments/A4-concept-video.html" class="timeline-link"
-            >View →</a
-          >
-        </div>
-
-        <div class="timeline-item">
-          <div class="timeline-icon">
-            <i class="fas fa-clipboard-check"></i>
+          <div class="team-member-mini">
+            <div class="member-avatar">
+              <div class="avatar-placeholder">
+                <i class="fas fa-user"></i>
+              </div>
+            </div>
+            <p class="member-name">Gil S.</p>
+            <p class="member-role">Developer and User Researcher</p>
           </div>
-          <h3>Final Report</h3>
-          <p>Design documentation & reflections</p>
-          <a href="./assignments/A11-finalreport.html" class="timeline-link"
-            >View →</a
-          >
+
+          <div class="team-member-mini">
+            <div class="member-avatar">
+              <div class="avatar-placeholder">
+                <i class="fas fa-user"></i>
+              </div>
+            </div>
+            <p class="member-name">Bennie N.</p>
+            <p class="member-role">Designer and User Researcher</p>
+          </div>
+
+          <div class="team-member-mini">
+            <div class="member-avatar">
+              <div class="avatar-placeholder">
+                <i class="fas fa-user"></i>
+              </div>
+            </div>
+            <p class="member-name">Gabriella U.</p>
+            <p class="member-role">Designer and Developer</p>
+          </div>
+        </div>
+
+        <div class="text-center" style="margin-top: 2rem">
+          <a href="./about.html" class="btn btn-outline">Learn More About Us</a>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
-  <!-- Footer -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-content">
-        <div class="footer-section">
-          <h4>CS 147 Project</h4>
-          <p>Introduction to Human-Computer Interaction</p>
-          <p>Stanford University | Autumn 2025</p>
-        </div>
+    <!-- Process Timeline -->
+    <section class="section bg-light">
+      <div class="container">
+        <h2 class="section-title">Our Design Journey</h2>
+        <p class="section-subtitle">
+          Explore our process — from needfinding to high-fidelity prototypes
+        </p>
 
-        <div class="footer-section">
-          <h4>Quick Links</h4>
-          <ul class="footer-links">
-            <li><a href="./index.html">Home</a></li>
-            <li><a href="./about.html">About</a></li>
-            <li><a href="./deliverables.html">Process</a></li>
-          </ul>
-        </div>
+        <div class="journey-timeline">
+          <div class="timeline-item">
+            <div class="timeline-icon"><i class="fas fa-search"></i></div>
+            <h3>Needfinding</h3>
+            <p>Interviews & emotional mapping research</p>
+            <a href="./assignments/A1-needfinding.html" class="timeline-link"
+              >View →</a
+            >
+          </div>
 
-        <div class="footer-section">
-          <h4>Course Info</h4>
-          <ul class="footer-links">
-            <li>
-              <a href="http://cs147.stanford.edu" target="_blank"
-                >CS 147 Course Site</a
-              >
-            </li>
-            <li>
-              <a href="http://hci.stanford.edu" target="_blank"
-                >Stanford HCI Group</a
-              >
-            </li>
-          </ul>
+          <div class="timeline-item">
+            <div class="timeline-icon"><i class="fas fa-pencil-ruler"></i></div>
+            <h3>Prototyping</h3>
+            <p>Low-fi and mid-fi iterations through user feedback</p>
+            <a href="./assignments/A5-lowfi.html" class="timeline-link"
+              >View →</a
+            >
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-icon"><i class="fas fa-video"></i></div>
+            <h3>Concept Video</h3>
+            <p>Visualizing how Kyro fits into daily life</p>
+            <a href="./assignments/A4-concept-video.html" class="timeline-link"
+              >View →</a
+            >
+          </div>
+
+          <div class="timeline-item">
+            <div class="timeline-icon">
+              <i class="fas fa-clipboard-check"></i>
+            </div>
+            <h3>Final Report</h3>
+            <p>Design documentation & reflections</p>
+            <a href="./assignments/A11-finalreport.html" class="timeline-link"
+              >View →</a
+            >
+          </div>
         </div>
       </div>
+    </section>
 
-      <div class="footer-bottom">
-        <p>&copy; 2025 Kyro Team | Design for Mental Wellbeing — CS 147</p>
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h4>CS 147 Project</h4>
+            <p>Introduction to Human-Computer Interaction</p>
+            <p>Stanford University | Autumn 2025</p>
+          </div>
+
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="./index.html">Home</a></li>
+              <li><a href="./about.html">About</a></li>
+              <li><a href="./deliverables.html">Process</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-section">
+            <h4>Course Info</h4>
+            <ul class="footer-links">
+              <li>
+                <a href="http://cs147.stanford.edu" target="_blank"
+                  >CS 147 Course Site</a
+                >
+              </li>
+              <li>
+                <a href="http://hci.stanford.edu" target="_blank"
+                  >Stanford HCI Group</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2025 Kyro Team | Design for Mental Wellbeing — CS 147</p>
+        </div>
       </div>
-    </div>
-  </footer>
+    </footer>
 
-  <script src="./assets/js/main.js"></script>
-</body>
+    <script src="./assets/js/main.js"></script>
+  </body>
 </html>
