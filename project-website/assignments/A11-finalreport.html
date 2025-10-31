@@ -1,335 +1,377 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>A11: Final Report | CS 147 Project</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link rel="stylesheet" href="../assets/css/style.css">
-</head>
-<body>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+  </head>
+  <body>
     <header>
-        <nav class="navbar">
-            <div class="container">
-                <div class="nav-brand">
-                    <img src="../assets/images/logo.png" alt="Project Logo" class="logo" onerror="this.style.display='none'">
-                    <span class="project-title">Project Name</span>
-                </div>
-                <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle navigation">
-                    <span class="hamburger"></span>
-                    <span class="hamburger"></span>
-                    <span class="hamburger"></span>
-                </button>
-                <ul class="nav-menu" id="nav-menu">
-                    <li><a href="../index.html">Home</a></li>
-                    <li><a href="../about.html">About</a></li>
-                    <li><a href="../deliverables.html">Deliverables</a></li>
-                </ul>
-            </div>
-        </nav>
+      <nav class="navbar">
+        <div class="container">
+          <div class="nav-brand">
+            <img
+              src="../assets/images/logo.png"
+              alt="Project Logo"
+              class="logo"
+              onerror="this.style.display='none'"
+            />
+            <span class="project-title">Project Name</span>
+          </div>
+          <button
+            class="mobile-toggle"
+            id="mobile-toggle"
+            aria-label="Toggle navigation"
+          >
+            <span class="hamburger"></span>
+            <span class="hamburger"></span>
+            <span class="hamburger"></span>
+          </button>
+          <ul class="nav-menu" id="nav-menu">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../deliverables.html">Deliverables</a></li>
+          </ul>
+        </div>
+      </nav>
     </header>
 
     <section class="page-header assignment-header">
-        <div class="container">
-            <div class="breadcrumb">
-                <a href="../deliverables.html">Deliverables</a> / <span>A11: Final Report</span>
-            </div>
-            <h1>Assignment 11: Final Project Report</h1>
-            <p class="assignment-subtitle">Complete documentation of our design process</p>
-            <div class="status-banner upcoming">
-                <i class="fas fa-clock"></i> Due Week 9 - November 19, 2025
-            </div>
+      <div class="container">
+        <div class="breadcrumb">
+          <a href="../deliverables.html">Deliverables</a> /
+          <span>A11: Final Report</span>
         </div>
+        <h1>Assignment 11: Final Project Report</h1>
+        <p class="assignment-subtitle">
+          Complete documentation of our design process
+        </p>
+        <div class="status-banner upcoming">
+          <i class="fas fa-clock"></i> Due Week 9 - November 19, 2025
+        </div>
+      </div>
     </section>
 
     <section class="section">
-        <div class="container">
-            <div class="assignment-intro">
-                <h2>Overview</h2>
-                <p>
-                    Our final report provides comprehensive documentation of our entire design process, from initial
-                    needfinding through final prototype. It synthesizes all our work, insights, and learnings from
-                    the quarter, demonstrating how human-centered design principles guided our solution.
-                </p>
-            </div>
-
-            <div class="downloads-section">
-                <h3><i class="fas fa-download"></i> Downloads</h3>
-                <div class="download-grid">
-                    <a href="../assets/pdfs/A11-final-report.pdf" class="download-card featured disabled">
-                        <i class="fas fa-file-pdf"></i>
-                        <span>Final Report PDF (Coming Soon)</span>
-                    </a>
-                    <a href="../assets/pdfs/A11-presentation.pdf" class="download-card disabled">
-                        <i class="fas fa-file-powerpoint"></i>
-                        <span>Final Presentation (Coming Soon)</span>
-                    </a>
-                </div>
-            </div>
-
-            <div class="content-section">
-                <h2>Report Structure</h2>
-                <p>Our final report follows this comprehensive structure:</p>
-
-                <div class="report-toc">
-                    <div class="toc-section">
-                        <div class="toc-number">1</div>
-                        <div class="toc-content">
-                            <h3>Executive Summary</h3>
-                            <p>High-level overview of problem, solution, and impact</p>
-                            <ul>
-                                <li>Project vision and value proposition</li>
-                                <li>Target users and key needs</li>
-                                <li>Solution overview and outcomes</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="toc-section">
-                        <div class="toc-number">2</div>
-                        <div class="toc-content">
-                            <h3>Problem Space & Research</h3>
-                            <p>Needfinding process and insights</p>
-                            <ul>
-                                <li>Research methodology and participants</li>
-                                <li>Key findings and user pain points</li>
-                                <li>POV statements and HMW questions</li>
-                                <li>Design opportunity identification</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="toc-section">
-                        <div class="toc-number">3</div>
-                        <div class="toc-content">
-                            <h3>Design Process</h3>
-                            <p>Iterative development from concept to prototype</p>
-                            <ul>
-                                <li>Initial concept and video</li>
-                                <li>Low-fidelity prototyping and testing</li>
-                                <li>Medium-fidelity iterations</li>
-                                <li>High-fidelity final design</li>
-                                <li>Key decisions and rationale</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="toc-section">
-                        <div class="toc-number">4</div>
-                        <div class="toc-content">
-                            <h3>User Testing & Validation</h3>
-                            <p>How we validated our design with real users</p>
-                            <ul>
-                                <li>Testing methodology and participants</li>
-                                <li>Key findings from each testing round</li>
-                                <li>Heuristic evaluation results</li>
-                                <li>How feedback shaped iterations</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="toc-section">
-                        <div class="toc-number">5</div>
-                        <div class="toc-content">
-                            <h3>Final Solution</h3>
-                            <p>Detailed documentation of our design</p>
-                            <ul>
-                                <li>Core features and functionality</li>
-                                <li>User flows and interactions</li>
-                                <li>Design system and visual language</li>
-                                <li>Technical implementation notes</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="toc-section">
-                        <div class="toc-number">6</div>
-                        <div class="toc-content">
-                            <h3>Reflection & Future Work</h3>
-                            <p>Lessons learned and next steps</p>
-                            <ul>
-                                <li>What worked well in our process</li>
-                                <li>Challenges and how we overcame them</li>
-                                <li>Key learnings about HCD</li>
-                                <li>Future improvements and features</li>
-                            </ul>
-                        </div>
-                    </div>
-
-                    <div class="toc-section">
-                        <div class="toc-number">7</div>
-                        <div class="toc-content">
-                            <h3>Appendices</h3>
-                            <p>Supporting materials and documentation</p>
-                            <ul>
-                                <li>Interview protocols and notes</li>
-                                <li>Testing scripts and data</li>
-                                <li>Complete prototype documentation</li>
-                                <li>Team member contributions</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="content-section bg-light">
-                <h2>Project Metrics</h2>
-                <!-- EDIT: Add your actual project metrics -->
-                <div class="metrics-showcase">
-                    <div class="metric-large">
-                        <i class="fas fa-users"></i>
-                        <div class="metric-value">X</div>
-                        <p>Users Interviewed</p>
-                    </div>
-
-                    <div class="metric-large">
-                        <i class="fas fa-sync"></i>
-                        <div class="metric-value">X</div>
-                        <p>Design Iterations</p>
-                    </div>
-
-                    <div class="metric-large">
-                        <i class="fas fa-clipboard-check"></i>
-                        <div class="metric-value">X</div>
-                        <p>Testing Sessions</p>
-                    </div>
-
-                    <div class="metric-large">
-                        <i class="fas fa-pencil-ruler"></i>
-                        <div class="metric-value">X</div>
-                        <p>Prototype Screens</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="content-section">
-                <h2>Key Learnings</h2>
-                <!-- EDIT: Add your team's key learnings -->
-                <div class="learnings-grid">
-                    <div class="learning-card">
-                        <i class="fas fa-heart"></i>
-                        <h4>User-Centered Approach</h4>
-                        <p>
-                            Starting with deep user research and continuously validating with real users led to
-                            insights we never would have discovered through assumptions alone.
-                        </p>
-                    </div>
-
-                    <div class="learning-card">
-                        <i class="fas fa-sync"></i>
-                        <h4>Iteration is Essential</h4>
-                        <p>
-                            Each round of prototyping and testing revealed new insights. Our final design is
-                            significantly better because we embraced iteration.
-                        </p>
-                    </div>
-
-                    <div class="learning-card">
-                        <i class="fas fa-comments"></i>
-                        <h4>Power of Feedback</h4>
-                        <p>
-                            Early and frequent feedback, even on rough prototypes, helped us fail fast and
-                            redirect efforts toward what truly matters to users.
-                        </p>
-                    </div>
-
-                    <div class="learning-card">
-                        <i class="fas fa-balance-scale"></i>
-                        <h4>Balancing Priorities</h4>
-                        <p>
-                            Learning to prioritize features based on user needs vs. technical feasibility vs.
-                            team capacity was a critical skill we developed.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="content-section bg-light">
-                <h2>Impact & Future Directions</h2>
-                <!-- EDIT: Describe your project's impact and future plans -->
-                <div class="impact-section">
-                    <div class="impact-content">
-                        <h3><i class="fas fa-bullseye"></i> Potential Impact</h3>
-                        <p>
-                            Our solution has the potential to [describe impact]. For our target users, this means
-                            [specific benefits]. We estimate that [quantifiable impact if available].
-                        </p>
-                    </div>
-
-                    <div class="future-content">
-                        <h3><i class="fas fa-road"></i> Next Steps</h3>
-                        <ul>
-                            <li>Further testing with larger user groups</li>
-                            <li>Technical implementation and development</li>
-                            <li>Additional features based on user feedback</li>
-                            <li>Partnerships and deployment strategy</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-
-            <div class="content-section">
-                <h2>Team Contributions</h2>
-                <!-- EDIT: Document team member contributions -->
-                <p>
-                    This project was a true collaborative effort. Each team member brought unique skills and
-                    contributed across all phases of the project. Detailed individual contributions are
-                    documented in the full report.
-                </p>
-            </div>
-
-            <div class="content-section bg-light">
-                <h2>Acknowledgments</h2>
-                <p>
-                    We would like to thank Professor James Landay and our teaching team for their guidance
-                    throughout this quarter. Special thanks to all the users who participated in our research
-                    and testing sessions—this project would not have been possible without their insights and
-                    feedback.
-                </p>
-            </div>
-
-            <div class="assignment-nav">
-                <a href="./A10-poster.html" class="btn btn-outline">
-                    <i class="fas fa-arrow-left"></i> Previous: Poster
-                </a>
-                <a href="../index.html" class="btn btn-primary">
-                    <i class="fas fa-home"></i> Back to Home
-                </a>
-            </div>
+      <div class="container">
+        <div class="assignment-intro">
+          <h2>Overview</h2>
+          <p>
+            Our final report provides comprehensive documentation of our entire
+            design process, from initial needfinding through final prototype. It
+            synthesizes all our work, insights, and learnings from the quarter,
+            demonstrating how human-centered design principles guided our
+            solution.
+          </p>
         </div>
+
+        <div class="downloads-section">
+          <h3><i class="fas fa-download"></i> Downloads</h3>
+          <div class="download-grid">
+            <a
+              href="../assets/pdfs/A11-final-report.pdf"
+              class="download-card featured disabled"
+            >
+              <i class="fas fa-file-pdf"></i>
+              <span>Final Report PDF (Coming Soon)</span>
+            </a>
+            <a
+              href="../assets/pdfs/A11-presentation.pdf"
+              class="download-card disabled"
+            >
+              <i class="fas fa-file-powerpoint"></i>
+              <span>Final Presentation (Coming Soon)</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="content-section">
+          <h2>Report Structure</h2>
+          <p>Our final report follows this comprehensive structure:</p>
+
+          <div class="report-toc">
+            <div class="toc-section">
+              <div class="toc-number">1</div>
+              <div class="toc-content">
+                <h3>Executive Summary</h3>
+                <p>High-level overview of problem, solution, and impact</p>
+                <ul>
+                  <li>Project vision and value proposition</li>
+                  <li>Target users and key needs</li>
+                  <li>Solution overview and outcomes</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="toc-section">
+              <div class="toc-number">2</div>
+              <div class="toc-content">
+                <h3>Problem Space & Research</h3>
+                <p>Needfinding process and insights</p>
+                <ul>
+                  <li>Research methodology and participants</li>
+                  <li>Key findings and user pain points</li>
+                  <li>POV statements and HMW questions</li>
+                  <li>Design opportunity identification</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="toc-section">
+              <div class="toc-number">3</div>
+              <div class="toc-content">
+                <h3>Design Process</h3>
+                <p>Iterative development from concept to prototype</p>
+                <ul>
+                  <li>Initial concept and video</li>
+                  <li>Low-fidelity prototyping and testing</li>
+                  <li>Medium-fidelity iterations</li>
+                  <li>High-fidelity final design</li>
+                  <li>Key decisions and rationale</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="toc-section">
+              <div class="toc-number">4</div>
+              <div class="toc-content">
+                <h3>User Testing & Validation</h3>
+                <p>How we validated our design with real users</p>
+                <ul>
+                  <li>Testing methodology and participants</li>
+                  <li>Key findings from each testing round</li>
+                  <li>Heuristic evaluation results</li>
+                  <li>How feedback shaped iterations</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="toc-section">
+              <div class="toc-number">5</div>
+              <div class="toc-content">
+                <h3>Final Solution</h3>
+                <p>Detailed documentation of our design</p>
+                <ul>
+                  <li>Core features and functionality</li>
+                  <li>User flows and interactions</li>
+                  <li>Design system and visual language</li>
+                  <li>Technical implementation notes</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="toc-section">
+              <div class="toc-number">6</div>
+              <div class="toc-content">
+                <h3>Reflection & Future Work</h3>
+                <p>Lessons learned and next steps</p>
+                <ul>
+                  <li>What worked well in our process</li>
+                  <li>Challenges and how we overcame them</li>
+                  <li>Key learnings about HCD</li>
+                  <li>Future improvements and features</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="toc-section">
+              <div class="toc-number">7</div>
+              <div class="toc-content">
+                <h3>Appendices</h3>
+                <p>Supporting materials and documentation</p>
+                <ul>
+                  <li>Interview protocols and notes</li>
+                  <li>Testing scripts and data</li>
+                  <li>Complete prototype documentation</li>
+                  <li>Team member contributions</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="content-section bg-light">
+          <h2>Project Metrics</h2>
+          <!-- EDIT: Add your actual project metrics -->
+          <div class="metrics-showcase">
+            <div class="metric-large">
+              <i class="fas fa-users"></i>
+              <div class="metric-value">X</div>
+              <p>Users Interviewed</p>
+            </div>
+
+            <div class="metric-large">
+              <i class="fas fa-sync"></i>
+              <div class="metric-value">X</div>
+              <p>Design Iterations</p>
+            </div>
+
+            <div class="metric-large">
+              <i class="fas fa-clipboard-check"></i>
+              <div class="metric-value">X</div>
+              <p>Testing Sessions</p>
+            </div>
+
+            <div class="metric-large">
+              <i class="fas fa-pencil-ruler"></i>
+              <div class="metric-value">X</div>
+              <p>Prototype Screens</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="content-section">
+          <h2>Key Learnings</h2>
+          <!-- EDIT: Add your team's key learnings -->
+          <div class="learnings-grid">
+            <div class="learning-card">
+              <i class="fas fa-heart"></i>
+              <h4>User-Centered Approach</h4>
+              <p>
+                Starting with deep user research and continuously validating
+                with real users led to insights we never would have discovered
+                through assumptions alone.
+              </p>
+            </div>
+
+            <div class="learning-card">
+              <i class="fas fa-sync"></i>
+              <h4>Iteration is Essential</h4>
+              <p>
+                Each round of prototyping and testing revealed new insights. Our
+                final design is significantly better because we embraced
+                iteration.
+              </p>
+            </div>
+
+            <div class="learning-card">
+              <i class="fas fa-comments"></i>
+              <h4>Power of Feedback</h4>
+              <p>
+                Early and frequent feedback, even on rough prototypes, helped us
+                fail fast and redirect efforts toward what truly matters to
+                users.
+              </p>
+            </div>
+
+            <div class="learning-card">
+              <i class="fas fa-balance-scale"></i>
+              <h4>Balancing Priorities</h4>
+              <p>
+                Learning to prioritize features based on user needs vs.
+                technical feasibility vs. team capacity was a critical skill we
+                developed.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="content-section bg-light">
+          <h2>Impact & Future Directions</h2>
+          <!-- EDIT: Describe your project's impact and future plans -->
+          <div class="impact-section">
+            <div class="impact-content">
+              <h3><i class="fas fa-bullseye"></i> Potential Impact</h3>
+              <p>
+                Our solution has the potential to [describe impact]. For our
+                target users, this means [specific benefits]. We estimate that
+                [quantifiable impact if available].
+              </p>
+            </div>
+
+            <div class="future-content">
+              <h3><i class="fas fa-road"></i> Next Steps</h3>
+              <ul>
+                <li>Further testing with larger user groups</li>
+                <li>Technical implementation and development</li>
+                <li>Additional features based on user feedback</li>
+                <li>Partnerships and deployment strategy</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div class="content-section">
+          <h2>Team Contributions</h2>
+          <!-- EDIT: Document team member contributions -->
+          <p>
+            This project was a true collaborative effort. Each team member
+            brought unique skills and contributed across all phases of the
+            project. Detailed individual contributions are documented in the
+            full report.
+          </p>
+        </div>
+
+        <div class="content-section bg-light">
+          <h2>Acknowledgments</h2>
+          <p>
+            We would like to thank Professor James Landay and our teaching team
+            for their guidance throughout this quarter. Special thanks to all
+            the users who participated in our research and testing sessions—this
+            project would not have been possible without their insights and
+            feedback.
+          </p>
+        </div>
+
+        <div class="assignment-nav">
+          <a href="./A10-poster.html" class="btn btn-outline">
+            <i class="fas fa-arrow-left"></i> Previous: Poster
+          </a>
+          <a href="../index.html" class="btn btn-primary">
+            <i class="fas fa-home"></i> Back to Home
+          </a>
+        </div>
+      </div>
     </section>
 
     <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h4>CS 147 Project</h4>
-                    <p>Introduction to Human-Computer Interaction</p>
-                    <p>Stanford University | Autumn 2025</p>
-                </div>
-                <div class="footer-section">
-                    <h4>Quick Links</h4>
-                    <ul class="footer-links">
-                        <li><a href="../index.html">Home</a></li>
-                        <li><a href="../about.html">About</a></li>
-                        <li><a href="../deliverables.html">Deliverables</a></li>
-                    </ul>
-                </div>
-                <div class="footer-section">
-                    <h4>Course Info</h4>
-                    <ul class="footer-links">
-                        <li><a href="http://cs147.stanford.edu" target="_blank">CS 147 Course Site</a></li>
-                        <li><a href="http://hci.stanford.edu" target="_blank">Stanford HCI Group</a></li>
-                    </ul>
-                </div>
-            </div>
-            <div class="footer-bottom">
-                <p>&copy; 2025 CS 147 Project Team. Taught by Prof. James Landay.</p>
-            </div>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h4>CS 147 Project</h4>
+            <p>Introduction to Human-Computer Interaction</p>
+            <p>Stanford University | Autumn 2025</p>
+          </div>
+          <div class="footer-section">
+            <h4>Quick Links</h4>
+            <ul class="footer-links">
+              <li><a href="../index.html">Home</a></li>
+              <li><a href="../about.html">About</a></li>
+              <li><a href="../deliverables.html">Deliverables</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h4>Course Info</h4>
+            <ul class="footer-links">
+              <li>
+                <a href="http://cs147.stanford.edu" target="_blank"
+                  >CS 147 Course Site</a
+                >
+              </li>
+              <li>
+                <a href="http://hci.stanford.edu" target="_blank"
+                  >Stanford HCI Group</a
+                >
+              </li>
+            </ul>
+          </div>
         </div>
+        <div class="footer-bottom">
+          <p>&copy; 2025 CS 147 Project Team. Taught by Prof. James Landay.</p>
+        </div>
+      </div>
     </footer>
 
     <script src="../assets/js/main.js"></script>
-</body>
+    <div class="paper-overlay"></div>
+  </body>
 </html>

@@ -1,0 +1,122 @@
+    <!-- === DESIGN PROCESS OVERVIEW === -->
+    <section class="section bg-light" id="process">
+        <h2 class="section-title">Our Design Process</h2>
+        <p class="section-subtitle">
+        From needfinding to high-fidelity prototypes — here's our journey
+      </p>
+      <div class="deliverables-table">
+        <!-- <div class="table-header">
+          <h3>Design Phases</h3>
+          <p>Research, ideation, prototyping, and testing</p>
+        </div> -->
+
+        <!-- A1: NEEDFINDING -->
+        <div class="deliverable-row">
+          <div class="deliverable-icon icon-research">
+            <i class="fas fa-search"></i>
+          </div>
+          <div class="deliverable-info">
+            <h4>A1 — Needfinding</h4>
+            <p>User interviews and emotional reflection insights</p>
+          </div>
+          <div class="deliverable-actions">
+            <a
+              href="./assets/pdfs/A1_needfinding.pdf"
+              class="btn-small btn-primary"
+              target="_blank"
+            >
+              <i class="fas fa-file-pdf"></i> PDF
+            </a>
+            <a
+              href="./assets/pdfs/A1_needfinding.pptx"
+              class="btn-small btn-secondary"
+              download
+            >
+              <i class="fas fa-file-powerpoint"></i> PPTX
+            </a>
+          </div>
+        </div>
+
+        <!-- A2: POVs & HMWs -->
+        <div class="deliverable-row">
+          <div class="deliverable-icon icon-ideate">
+            <i class="fas fa-lightbulb"></i>
+          </div>
+          <div class="deliverable-info">
+            <h4>A2 — POVs, HMWs, Experience Prototypes</h4>
+            <p>Problem reframing and idea generation</p>
+          </div>
+          <div class="deliverable-actions">
+            <a
+              href="./assets/pdfs/A2_POVs.pdf"
+              class="btn-small btn-primary"
+              target="_blank"
+            >
+              <i class="fas fa-file-pdf"></i> PDF
+            </a>
+            <a
+              href="./assets/pdfs/A2_POVs.pptx"
+              class="btn-small btn-secondary"
+              download
+            >
+              <i class="fas fa-file-powerpoint"></i> PPTX
+            </a>
+          </div>
+        </div>
+
+        <!-- A4: CONCEPT VIDEO -->
+        <div class="deliverable-row">
+          <div class="deliverable-icon icon-prototype">
+            <i class="fas fa-video"></i>
+          </div>
+          <div class="deliverable-info">
+            <h4>A4 — Concept Video</h4>
+            <p>Kyro demo video and narrative concept</p>
+          </div>
+          <div class="deliverable-actions">
+            <a href="#video" class="btn-small btn-primary">
+              <i class="fab fa-youtube"></i> Watch
+            </a>
+            <a
+              href="./assets/pdfs/A4_concept_video.pdf"
+              class="btn-small btn-secondary"
+              target="_blank"
+            >
+              <i class="fas fa-file-pdf"></i> PDF
+            </a>
+            <a
+              href="./assets/pdfs/A4_concept_video.pptx"
+              class="btn-small btn-secondary"
+              download
+            >
+              <i class="fas fa-file-powerpoint"></i> PPTX
+            </a>
+          </div>
+        </div>
+
+        <!-- A5: LOW-FI PROTOTYPE -->
+        <div class="deliverable-row">
+          <div class="deliverable-icon icon-prototype">
+            <i class="fas fa-pencil-ruler"></i>
+          </div>
+          <div class="deliverable-info">
+            <h4>A5 — Low-Fi Prototype</h4>
+            <p>Paper prototypes and early interface sketches</p>
+          </div>
+          <div class="deliverable-actions">
+            <a
+              href="./assets/pdfs/A5_lowfi.pdf"
+              class="btn-small btn-primary"
+              target="_blank"
+            >
+              <i class="fas fa-file-pdf"></i> PDF
+            </a>
+            <a
+              href="./assets/pdfs/A5_lowfi.pptx"
+              class="btn-small btn-secondary"
+              download
+            >
+              <i class="fas fa-file-powerpoint"></i> PPTX
+            </a>
+          </div>
+        </div>

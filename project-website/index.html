@@ -53,6 +53,7 @@
         background-size: cover;
       }
 
+
       /* === TYPOGRAPHY === */
       h1,
       h2,
@@ -88,6 +89,19 @@
       }
 
       /* === NAVBAR === */
+      .overlay {
+        position: fixed;
+        inset: 0;
+        background: url('./assets/images/papertexture.jpg') repeat;
+        opacity: 1;
+        pointer-events: none;
+        z-index: 800;
+        mix-blend-mode: multiply;
+        background-size: 1200px;
+        background-position: center;
+        overflow: hidden;
+  
+      }
       .navbar {
         background: rgba(255, 255, 255, 0.7);
         backdrop-filter: blur(8px);
@@ -156,12 +170,16 @@
 
       /* === HERO SECTION === */
       .hero {
-        padding: 5rem 1rem;
+        padding: 10rem 1rem;
+        padding-top: 13rem;
         text-align: center;
-        border-radius: 24px;
-        width: 90%;
-        max-width: 1000px;
-        margin: 3rem auto;
+        width: 100%;
+        /* max-width: 1000px;
+        margin: 3rem auto; */
+        background-image: url('./assets/images/glowing.svg');
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: auto 100%;
       }
 
       .hero-title {
@@ -183,6 +201,12 @@
       .hero-buttons {
         margin-top: 1.5rem;
       }
+      .hero-text {
+        justify-content: center;
+        align-content: center;
+
+      }
+      
 
       /* === BUTTONS === */
       .btn {
@@ -239,6 +263,8 @@
         border-radius: 24px;
         padding: 3rem 2rem;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+        margin-top: 3rem;
+        align-content: center;
       }
 
       /* === FEATURE CARDS === */
@@ -482,8 +508,8 @@
       }
 
       .member-avatar {
-        width: 120px;
-        height: 120px;
+        width: 200px;
+        height: 200px;
         border-radius: 50%;
         overflow: hidden;
         background: rgba(255, 255, 255, 0.3);
@@ -491,7 +517,6 @@
         align-items: center;
         justify-content: center;
         margin-bottom: 1rem;
-        border: 3px solid rgba(255, 255, 255, 0.5);
       }
 
       .avatar-placeholder {
@@ -554,6 +579,7 @@
 
         .section {
           width: 95%;
+          z-index: 999;
         }
 
         .deliverable-row {
@@ -576,6 +602,7 @@
     <!-- === NAVIGATION === -->
     <header>
       <nav class="navbar">
+        <div class="overlay"></div>
         <div class="container">
           <div class="nav-brand">
             <img
@@ -599,45 +626,36 @@
 
           <ul class="nav-menu" id="nav-menu">
             <li><a href="#home">Home</a></li>
-            <li><a href="#overview">Overview</a></li>
-            <li><a href="#process">Process</a></li>
-            <li><a href="#video">Video</a></li>
-            <li><a href="#deliverables">Deliverables</a></li>
             <li><a href="#team">Team</a></li>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#deliverables">Process</a></li>
+            <li><a href="#video">Video</a></li>
           </ul>
         </div>
       </nav>
     </header>
 
     <!-- === HERO SECTION === -->
+      <!-- need to add logo or graphic could add glowing heads-->
     <section class="hero" id="home">
+      <div class="overlay"></div>
       <div class="hero-content">
+        
         <h1 class="hero-title">KYRO</h1>
         <p class="hero-tagline">
           Planning life by how you feel, not just by what you do
         </p>
         <p class="hero-description">
-          Kyro is an emotional scheduling app that helps users plan their time
-          based on how they feel and not just what they need to do. By combining
-          scheduling with emotional awareness, Kyro helps users balance
+          By combining scheduling with emotional awareness, Kyro helps users balance
           productivity and well-being, encouraging healthier routines and joyful
           living.
         </p>
-
-        <div class="hero-buttons">
-          <a href="#team" class="btn btn-primary">
-            <i class="fas fa-users"></i> Meet the Team
-          </a>
-          <a href="#process" class="btn btn-secondary">
-            <i class="fas fa-folder-open"></i> View Process
-          </a>
+        <svg> </svg>
         </div>
       </div>
     </section>
-
     <!-- === PROJECT OVERVIEW === -->
     <section class="section bg-light" id="overview">
-      <h2 class="section-title">Project Overview</h2>
 
       <div class="features-grid">
         <div class="feature-card">
@@ -683,214 +701,7 @@
         </div>
       </div>
     </section>
-
-    <!-- === DESIGN PROCESS OVERVIEW === -->
-    <section class="section" id="process">
-      <h2 class="section-title">Our Design Process</h2>
-      <p class="section-subtitle">
-        From needfinding to high-fidelity prototypes — here's our journey
-      </p>
-
-      <div class="deliverables-table">
-        <div class="table-header">
-          <h3>Design Phases</h3>
-          <p>Research, ideation, prototyping, and testing</p>
-        </div>
-
-        <!-- A1: NEEDFINDING -->
-        <div class="deliverable-row">
-          <div class="deliverable-icon icon-research">
-            <i class="fas fa-search"></i>
-          </div>
-          <div class="deliverable-info">
-            <h4>A1 — Needfinding</h4>
-            <p>User interviews and emotional reflection insights</p>
-          </div>
-          <div class="deliverable-actions">
-            <a
-              href="./assets/pdfs/A1_needfinding.pdf"
-              class="btn-small btn-primary"
-              target="_blank"
-            >
-              <i class="fas fa-file-pdf"></i> PDF
-            </a>
-            <a
-              href="./assets/pdfs/A1_needfinding.pptx"
-              class="btn-small btn-secondary"
-              download
-            >
-              <i class="fas fa-file-powerpoint"></i> PPTX
-            </a>
-          </div>
-        </div>
-
-        <!-- A2: POVs & HMWs -->
-        <div class="deliverable-row">
-          <div class="deliverable-icon icon-ideate">
-            <i class="fas fa-lightbulb"></i>
-          </div>
-          <div class="deliverable-info">
-            <h4>A2 — POVs, HMWs, Experience Prototypes</h4>
-            <p>Problem reframing and idea generation</p>
-          </div>
-          <div class="deliverable-actions">
-            <a
-              href="./assets/pdfs/A2_POVs.pdf"
-              class="btn-small btn-primary"
-              target="_blank"
-            >
-              <i class="fas fa-file-pdf"></i> PDF
-            </a>
-            <a
-              href="./assets/pdfs/A2_POVs.pptx"
-              class="btn-small btn-secondary"
-              download
-            >
-              <i class="fas fa-file-powerpoint"></i> PPTX
-            </a>
-          </div>
-        </div>
-
-        <!-- A4: CONCEPT VIDEO -->
-        <div class="deliverable-row">
-          <div class="deliverable-icon icon-prototype">
-            <i class="fas fa-video"></i>
-          </div>
-          <div class="deliverable-info">
-            <h4>A4 — Concept Video</h4>
-            <p>Kyro demo video and narrative concept</p>
-          </div>
-          <div class="deliverable-actions">
-            <a href="#video" class="btn-small btn-primary">
-              <i class="fab fa-youtube"></i> Watch
-            </a>
-            <a
-              href="./assets/pdfs/A4_concept_video.pdf"
-              class="btn-small btn-secondary"
-              target="_blank"
-            >
-              <i class="fas fa-file-pdf"></i> PDF
-            </a>
-            <a
-              href="./assets/pdfs/A4_concept_video.pptx"
-              class="btn-small btn-secondary"
-              download
-            >
-              <i class="fas fa-file-powerpoint"></i> PPTX
-            </a>
-          </div>
-        </div>
-
-        <!-- A5: LOW-FI PROTOTYPE -->
-        <div class="deliverable-row">
-          <div class="deliverable-icon icon-prototype">
-            <i class="fas fa-pencil-ruler"></i>
-          </div>
-          <div class="deliverable-info">
-            <h4>A5 — Low-Fi Prototype</h4>
-            <p>Paper prototypes and early interface sketches</p>
-          </div>
-          <div class="deliverable-actions">
-            <a
-              href="./assets/pdfs/A5_lowfi.pdf"
-              class="btn-small btn-primary"
-              target="_blank"
-            >
-              <i class="fas fa-file-pdf"></i> PDF
-            </a>
-            <a
-              href="./assets/pdfs/A5_lowfi.pptx"
-              class="btn-small btn-secondary"
-              download
-            >
-              <i class="fas fa-file-powerpoint"></i> PPTX
-            </a>
-          </div>
-        </div>
-
-        <!-- A6: MEDIUM-FI PROTOTYPE (COMING SOON) -->
-        <div class="deliverable-row coming-soon">
-          <div class="deliverable-icon icon-prototype">
-            <i class="fas fa-tablet-alt"></i>
-          </div>
-          <div class="deliverable-info">
-            <h4>A6 — Medium-Fi Prototype</h4>
-            <p>Digital wireframes with interactivity</p>
-          </div>
-          <div class="deliverable-actions">
-            <span class="coming-soon-badge">
-              <i class="fas fa-clock"></i> Coming Soon
-            </span>
-          </div>
-        </div>
-
-        <!-- A8: HIGH-FI PROTOTYPE (COMING SOON) -->
-        <div class="deliverable-row coming-soon">
-          <div class="deliverable-icon icon-prototype">
-            <i class="fas fa-mobile-alt"></i>
-          </div>
-          <div class="deliverable-info">
-            <h4>A8 — High-Fi Prototype</h4>
-            <p>Fully interactive, polished prototype</p>
-          </div>
-          <div class="deliverable-actions">
-            <span class="coming-soon-badge">
-              <i class="fas fa-clock"></i> Coming Soon
-            </span>
-          </div>
-        </div>
-
-        <!-- A9: HEURISTIC EVALUATION (COMING SOON) -->
-        <div class="deliverable-row coming-soon">
-          <div class="deliverable-icon icon-test">
-            <i class="fas fa-clipboard-check"></i>
-          </div>
-          <div class="deliverable-info">
-            <h4>A9 — Heuristic Evaluation</h4>
-            <p>Expert usability assessment</p>
-          </div>
-          <div class="deliverable-actions">
-            <span class="coming-soon-badge">
-              <i class="fas fa-clock"></i> Coming Soon
-            </span>
-          </div>
-        </div>
-
-        <!-- A10: POSTER (COMING SOON) -->
-        <div class="deliverable-row coming-soon">
-          <div class="deliverable-icon icon-test">
-            <i class="fas fa-image"></i>
-          </div>
-          <div class="deliverable-info">
-            <h4>A10 — Poster & Demo</h4>
-            <p>Visual summary and presentation materials</p>
-          </div>
-          <div class="deliverable-actions">
-            <span class="coming-soon-badge">
-              <i class="fas fa-clock"></i> Coming Soon
-            </span>
-          </div>
-        </div>
-
-        <!-- A11: FINAL REPORT (COMING SOON) -->
-        <div class="deliverable-row coming-soon">
-          <div class="deliverable-icon icon-test">
-            <i class="fas fa-file-alt"></i>
-          </div>
-          <div class="deliverable-info">
-            <h4>A11 — Final Report</h4>
-            <p>Complete design documentation</p>
-          </div>
-          <div class="deliverable-actions">
-            <span class="coming-soon-badge">
-              <i class="fas fa-clock"></i> Coming Soon
-            </span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- === CONCEPT VIDEO === -->
+      <!-- === CONCEPT VIDEO === -->
     <section class="section bg-light" id="video">
       <h2 class="section-title">Concept Video</h2>
       <p class="section-subtitle">
@@ -915,18 +726,15 @@
       </div>
     </section>
 
-    <!-- === FINAL DELIVERABLES === -->
-    <section class="section" id="deliverables">
-      <h2 class="section-title">All Project Files</h2>
-      <p class="section-subtitle">
-        Download PDFs, presentations, and supplementary materials
+    <!-- === FINAL DELIVERABLES === --> 
+     <!-- want to change the styling for this later. probably put pictures for each phase -->
+    <section class="section bg-light" id="deliverables">
+      <h2 class="section-title">Our Design Process</h2>
+        <p class="section-subtitle">
+        From needfinding to high-fidelity prototypes — here's our journey
       </p>
-
       <div class="deliverables-table">
-        <div class="table-header">
-          <h3>Complete Deliverables</h3>
-          <p>All research, prototypes, and documentation</p>
-        </div>
+      
 
         <div class="deliverable-row">
           <div class="deliverable-icon icon-research">
@@ -1045,10 +853,92 @@
             </a>
           </div>
         </div>
+
+        <!-- A6: MEDIUM-FI PROTOTYPE (COMING SOON) -->
+        <div class="deliverable-row coming-soon">
+          <div class="deliverable-icon icon-prototype">
+            <i class="fas fa-tablet-alt"></i>
+          </div>
+          <div class="deliverable-info">
+            <h4>A6 — Medium-Fi Prototype</h4>
+            <p>Digital wireframes with interactivity</p>
+          </div>
+          <div class="deliverable-actions">
+            <span class="coming-soon-badge">
+              <i class="fas fa-clock"></i> Coming Soon
+            </span>
+          </div>
+        </div>
+
+        <!-- A8: HIGH-FI PROTOTYPE (COMING SOON) -->
+        <div class="deliverable-row coming-soon">
+          <div class="deliverable-icon icon-prototype">
+            <i class="fas fa-mobile-alt"></i>
+          </div>
+          <div class="deliverable-info">
+            <h4>A8 — High-Fi Prototype</h4>
+            <p>Fully interactive, polished prototype</p>
+          </div>
+          <div class="deliverable-actions">
+            <span class="coming-soon-badge">
+              <i class="fas fa-clock"></i> Coming Soon
+            </span>
+          </div>
+        </div>
+
+        <!-- A9: HEURISTIC EVALUATION (COMING SOON) -->
+        <div class="deliverable-row coming-soon">
+          <div class="deliverable-icon icon-test">
+            <i class="fas fa-clipboard-check"></i>
+          </div>
+          <div class="deliverable-info">
+            <h4>A9 — Heuristic Evaluation</h4>
+            <p>Expert usability assessment</p>
+          </div>
+          <div class="deliverable-actions">
+            <span class="coming-soon-badge">
+              <i class="fas fa-clock"></i> Coming Soon
+            </span>
+          </div>
+        </div>
+
+        <!-- A10: POSTER (COMING SOON) -->
+        <div class="deliverable-row coming-soon">
+          <div class="deliverable-icon icon-test">
+            <i class="fas fa-image"></i>
+          </div>
+          <div class="deliverable-info">
+            <h4>A10 — Poster & Demo</h4>
+            <p>Visual summary and presentation materials</p>
+          </div>
+          <div class="deliverable-actions">
+            <span class="coming-soon-badge">
+              <i class="fas fa-clock"></i> Coming Soon
+            </span>
+          </div>
+        </div>
+
+        <!-- A11: FINAL REPORT (COMING SOON) -->
+        <div class="deliverable-row coming-soon">
+          <div class="deliverable-icon icon-test">
+            <i class="fas fa-file-alt"></i>
+          </div>
+          <div class="deliverable-info">
+            <h4>A11 — Final Report</h4>
+            <p>Complete design documentation</p>
+          </div>
+          <div class="deliverable-actions">
+            <span class="coming-soon-badge">
+              <i class="fas fa-clock"></i> Coming Soon
+            </span>
+          </div>
+        </div>
       </div>
+      </div>
+      
     </section>
 
-    <!-- === TEAM SECTION === -->
+      <!-- === TEAM === -->
     <section class="section bg-light" id="team">
       <h2 class="section-title">Our Team</h2>
       <p class="section-subtitle">CS 147: Design for Mental Wellbeing</p>
@@ -1123,6 +1013,10 @@
         </div>
       </div>
     </section>
+  
+
+
+    <!-- === TEAM SECTION === -->
 
     <!-- === FOOTER === -->
     <footer class="footer">
@@ -1141,7 +1035,6 @@
         >
       </p>
     </footer>
-
     <!-- === JAVASCRIPT === -->
     <script src="./assets/js/main.js"></script>
   </body>
