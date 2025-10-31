@@ -103,11 +103,13 @@
   
       }
       .navbar {
-        background: rgba(255, 255, 255, 0.7);
+        /* background: rgba(255, 255, 255, 0.7); */
         backdrop-filter: blur(8px);
         padding: 1rem 0;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.05);
-        position: sticky;
+        /* border-bottom: 1px solid rgba(0, 0, 0, 0.05); */
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 100%;
+        position: fixed;
         top: 0;
         z-index: 999;
       }
@@ -117,7 +119,7 @@
         justify-content: space-between;
         align-items: center;
         width: 90%;
-        max-width: 1100px;
+        max-width: 1200px;
         margin: auto;
       }
 
@@ -562,10 +564,10 @@
           top: 100%;
           left: 0;
           right: 0;
-          background: rgba(255, 255, 255, 0.95);
+          /* background: rgba(255, 255, 255, 0.95); */
           flex-direction: column;
           padding: 1rem;
-          box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+          /* box-shadow: 0 4px 30px rgba(0, 0, 0, 1); */
           display: none;
         }
 
@@ -605,13 +607,13 @@
         <div class="overlay"></div>
         <div class="container">
           <div class="nav-brand">
-            <img
+            <!-- <img
               src="./assets/images/logo.png"
               alt="Kyro Logo"
               class="logo"
               onerror="this.style.display='none'"
-            />
-            <span>Kyro</span>
+            /> -->
+            <span>KYRO</span>
           </div>
 
           <button
