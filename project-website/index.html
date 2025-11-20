@@ -39,6 +39,11 @@
         box-sizing: border-box;
       }
 
+      html, body {
+        width: 100%;
+        overflow-x: hidden;
+      }
+
       body {
         font-family: "DM Sans", sans-serif;
         color: #2d2d2d;
@@ -51,6 +56,7 @@
         );
         background-attachment: fixed;
         background-size: cover;
+        min-height: 100vh;
       }
 
 
@@ -91,7 +97,12 @@
       /* === NAVBAR === */
       .overlay {
         position: fixed;
-        inset: 0;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
         background: url('./assets/images/papertexture.jpg') repeat;
         opacity: .6;
         pointer-events: none;
@@ -99,14 +110,11 @@
         mix-blend-mode: multiply;
         background-size: 1200px;
         background-position: center;
-        overflow: hidden;
-  
       }
       .navbar {
-        /* background: rgba(255, 255, 255, 0.7); */
+        background: rgba(221, 218, 194, 0.85);
         backdrop-filter: blur(8px);
         padding: 1rem 0;
-        /* border-bottom: 1px solid rgba(0, 0, 0, 0.05); */
         box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         width: 100%;
         position: fixed;
@@ -176,12 +184,13 @@
         padding-top: 9rem;
         text-align: center;
         width: 100%;
-        /* max-width: 1000px;
-        margin: 3rem auto; */
+        min-height: 100vh;
         background-image: url('./assets/images/glowing.svg');
-        background-position: center;
+        background-position: center top;
         background-repeat: no-repeat;
-        background-size: auto 100%;
+        background-size: auto 90%;
+        margin-top: -60px;
+        padding-top: calc(9rem + 60px);
       }
 
       .hero-title {
@@ -190,14 +199,25 @@
 
       .hero-tagline {
         color: #250f02;
-        margin-top: 0.5rem;
-        font-weight: bolder;
-        font-size: 1.2rem;
+        margin-top: 1rem;
+        font-weight: 700;
+        font-size: 1.3rem;
+        line-height: 1.4;
+        letter-spacing: -0.3px;
       }
 
       .hero-description {
         margin: 1.5rem auto;
         max-width: 700px;
+        line-height: 1.7;
+        color: #333;
+      }
+
+      .hero-logo {
+        height: 300px;
+        max-width: 90%;
+        object-fit: contain;
+        margin-bottom: 0.5rem;
       }
 
       .hero-buttons {
@@ -596,18 +616,28 @@
         }
 
         .hero {
-          padding: 7rem 1rem 5rem;
-          padding-top: 8rem;
-          background-size: auto 80%;
+          padding: 6rem 1rem 4rem;
+          padding-top: calc(4rem + 60px);
+          background-size: auto 70%;
+          min-height: auto;
+        }
+
+        .hero-logo {
+          height: 160px;
+          margin-bottom: 1rem;
         }
 
         .hero-tagline {
-          font-size: 1rem;
+          font-size: 1.15rem;
+          margin-top: 0.75rem;
+          padding: 0 1rem;
         }
 
         .hero-description {
-          font-size: 0.95rem;
-          padding: 0 0.5rem;
+          font-size: 0.9rem;
+          padding: 0 1rem;
+          margin: 1.25rem auto;
+          line-height: 1.6;
         }
 
         h2.section-title {
@@ -624,13 +654,22 @@
           top: 100%;
           left: 0;
           right: 0;
-          background: rgba(255, 255, 255, 0.95);
+          background: rgba(27, 64, 59, 0.95);
           backdrop-filter: blur(10px);
           flex-direction: column;
-          padding: 1rem;
-          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+          padding: 1.5rem 1rem;
+          box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
           display: none;
-          gap: 0.5rem;
+          gap: 0.75rem;
+        }
+
+        .nav-menu a {
+          color: #ffffff;
+        }
+
+        .nav-menu a:hover,
+        .nav-menu a.active {
+          color: #8fbd41;
         }
 
         .nav-menu.active {
@@ -779,16 +818,24 @@
         }
 
         .hero {
-          padding: 6rem 0.75rem 4rem;
-          padding-top: 7rem;
+          padding: 5rem 0.75rem 3rem;
+          padding-top: calc(5rem + 60px);
+        }
+
+        .hero-logo {
+          height: 130px;
+          margin-bottom: 0.75rem;
         }
 
         .hero-tagline {
-          font-size: 0.9rem;
+          font-size: 1.05rem;
+          padding: 0 0.75rem;
         }
 
         .hero-description {
-          font-size: 0.9rem;
+          font-size: 0.85rem;
+          padding: 0 0.5rem;
+          line-height: 1.55;
         }
 
         h2.section-title {
@@ -913,7 +960,7 @@
       <div class="overlay"></div>
       <div class="hero-content">
         
-        <img src="./assets/images/logo.png" alt="Kyro Logo" style="height: 300px;" />
+        <img src="./assets/images/logo.png" alt="Kyro Logo" class="hero-logo" />
         <p class="hero-tagline">
           Planning life by how you feel, not just by what you do
         </p>
