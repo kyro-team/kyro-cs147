@@ -181,14 +181,9 @@
       /* === HERO SECTION === */
       .hero {
         padding: 10rem 1rem;
-        padding-top: 9rem;
         text-align: center;
         width: 100%;
         min-height: 100vh;
-        background-image: url('./assets/images/glowing.svg');
-        background-position: center top;
-        background-repeat: no-repeat;
-        background-size: auto 90%;
         margin-top: -60px;
         padding-top: calc(9rem + 60px);
       }
@@ -198,26 +193,43 @@
       }
 
       .hero-tagline {
-        color: #250f02;
-        margin-top: 1rem;
+        position: absolute;
+        top: 400px;
+        color: #fdffe3;
         font-weight: 700;
-        font-size: 1.3rem;
+        font-size: 4rem;
         line-height: 1.4;
         letter-spacing: -0.3px;
+        
+      }
+
+      @keyframes breathe {
+        0%, 100% { transform: scale(1); opacity: 1; }
+        50% { transform: scale(1.03); opacity: 0.95; }
+      }
+
+      .logo-block {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 1rem;
       }
 
       .hero-description {
         margin: 1.5rem auto;
-        max-width: 700px;
+        max-width: 1000px;
         line-height: 1.7;
-        color: #333;
+        color: #fdffe3;
+        padding: 1rem 1.5rem;
+        border-radius: 12px;
       }
 
       .hero-logo {
         height: 300px;
         max-width: 90%;
-        object-fit: contain;
+        object-fit: cover;
         margin-bottom: 0.5rem;
+        animation: breathe 6s ease-in-out infinite;
       }
 
       .hero-buttons {
@@ -297,15 +309,16 @@
         gap: 2rem;
         margin-top: 2rem;
       }
-
-      .feature-card {
-        text-align: center;
-        padding: 2rem;
-      }
-
-      .feature-icon {
-        font-size: 3rem;
-        color: #1b403b;
+            /* Make tagline flow naturally beneath the logo on small viewports
+               instead of using absolute positioning which causes overlap. */
+      .hero-tagline {
+        position: static;
+        margin-top: 0.6rem;
+        color: #fdffe3;
+        font-weight: 700;
+        font-size: 1.15rem;
+        line-height: 1.4;
+        letter-spacing: -0.3px;
         margin-bottom: 1rem;
       }
 
@@ -317,7 +330,7 @@
 
       /* === DESIGN PROCESS / DELIVERABLES === */
       .deliverables-table {
-        background: white;
+        background: rgba(221, 218, 194, 0.6);
         border-radius: 16px;
         box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
         overflow: hidden;
@@ -350,20 +363,12 @@
         align-items: center;
         gap: 1.5rem;
         padding: 1.5rem;
-        border-bottom: 1px solid #e9f0ff;
+        border-bottom: 1px solid rgba(221, 218, 194, 0.8);
         transition: background 0.2s ease;
       }
 
       .deliverable-row:hover {
-        background: #f8faff;
-      }
-
-      .deliverable-row:nth-child(even) {
-        background: #fafbff;
-      }
-
-      .deliverable-row:nth-child(even):hover {
-        background: #f0f4ff;
+        background: rgba(221, 218, 194, 1);
       }
 
       .deliverable-row:last-child {
@@ -607,6 +612,23 @@
           padding: 0.5rem 1rem;
           font-size: 0.8rem;
         }
+        .logo-block {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-top: 1rem;
+          justify-content: center;
+        }
+
+        .hero-tagline {
+          position: static;
+          margin-top: 0.5rem;
+          color: #fdffe3;
+          font-weight: 700;
+          font-size: 1rem;
+          line-height: 1.4;
+          letter-spacing: -0.3px;
+        }
       }
 
       /* Mobile breakpoint */
@@ -626,11 +648,22 @@
           height: 160px;
           margin-bottom: 1rem;
         }
+        .logo-block {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          margin-top: 1rem;
+          justify-content: center;
+        }
 
         .hero-tagline {
+          position: static;
+          margin-top: 0.6rem;
+          color: #fdffe3;
+          font-weight: 700;
           font-size: 1.15rem;
-          margin-top: 0.75rem;
-          padding: 0 1rem;
+          line-height: 1.4;
+          letter-spacing: -0.3px;
         }
 
         .hero-description {
@@ -638,6 +671,7 @@
           padding: 0 1rem;
           margin: 1.25rem auto;
           line-height: 1.6;
+          max-width: 400px;
         }
 
         h2.section-title {
@@ -832,12 +866,6 @@
           padding: 0 0.75rem;
         }
 
-        .hero-description {
-          font-size: 0.85rem;
-          padding: 0 0.5rem;
-          line-height: 1.55;
-        }
-
         h2.section-title {
           font-size: 1.4rem;
         }
@@ -959,11 +987,12 @@
     <section class="hero" id="home">
       <div class="overlay"></div>
       <div class="hero-content">
-        
-        <img src="./assets/images/logo.png" alt="Kyro Logo" class="hero-logo" />
-        <p class="hero-tagline">
-          Planning life by how you feel, not just by what you do
-        </p>
+        <div class="logo-block">
+          <img src="./assets/images/logo.png" alt="Kyro Logo" class="hero-logo" />
+          <p class="hero-tagline">
+          Planning life by how you feel
+          </p>
+        </div>
         <p class="hero-description">
           By combining scheduling with emotional awareness, Kyro helps users balance
           productivity and well-being, encouraging healthier routines and joyful
@@ -971,7 +1000,6 @@
         </p>
         <svg> </svg>
         </div>
-      </div>
     </section>
     <!-- === PROJECT OVERVIEW === -->
     <section class="section bg-light" id="overview">
